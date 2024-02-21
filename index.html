@@ -4,11 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="CSS_Styling/reset.css" />
     <link rel="stylesheet" href="CSS_Styling/style.css" />
@@ -22,38 +38,44 @@
     <!-- Loading Screen -->
     <div class="loading-screen">
       <ul>
-        <li class="blinking">I</li>
-        <li class="blinking">S</li>
-        <li class="blinking">A</li>
-        <li class="blinking">A</li>
-        <li class="blinking">C</li>
+        <li>I</li>
+        <li>S</li>
+        <li>A</li>
+        <li>A</li>
+        <li>C</li>
       </ul>
     </div>
 
     <div class="content" id="content">
       <!-- Burger Menu Start -->
       <nav class="burger-menu">
-        <ul>
+        <ul class="burger-links">
           <li><a href="#aboutme">About Me</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#experience">Experience</a></li>
         </ul>
-        <div class="burger-sm">
-          <a
-            rel="noopener"
-            href="https://linkedin.com/in/isaac-del-castillo-5a8a76204"
-            target="_blank"
-          >
-            <div class="header-sm-linkedin"></div>
-          </a>
-          <a rel="noopener" href="https://github.com/IsaacDC" target="_blank">
-            <div class="header-sm-github"></div>
-          </a>
-          <a href="mailto:isaacdc03@hotmail.com" target="_blank">
-            <div class="header-sm-email"></div>
-          </a>
-        </div>
+        <ul class="burger-sm">
+          <li class="item">
+            <a href="mailto:isaacdc03@hotmail.com" target="_blank">
+              <i class="icon fa fa-envelope"></i>
+            </a>
+          </li>
+          <li class="item">
+            <a
+              rel="noopener"
+              href="https://linkedin.com/in/isaac-del-castillo-5a8a76204"
+              target="_blank"
+            >
+              <i class="icon fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="item">
+            <a rel="noopener" href="https://github.com/IsaacDC" target="_blank">
+              <i class="icon fa-brands fa-github"></i>
+            </a>
+          </li>
+        </ul>
       </nav>
       <!-- Burger Menu Stop -->
 
@@ -69,39 +91,28 @@
         </nav>
 
         <!-- Social Media -->
-        <ul>
+        <ul class="header-sm">
           <li class="item">
-            <a href="#">
-              <i class="icon fa-brands fa-instagram"></i>
+            <a href="mailto:isaacdc03@hotmail.com" target="_blank">
+              <i class="icon fa fa-envelope"></i>
             </a>
           </li>
           <li class="item">
-            <a href="#">
+            <a
+              rel="noopener"
+              href="https://linkedin.com/in/isaac-del-castillo-5a8a76204"
+              target="_blank"
+            >
               <i class="icon fa-brands fa-linkedin"></i>
             </a>
           </li>
           <li class="item">
-            <a href="#">
+            <a rel="noopener" href="https://github.com/IsaacDC" target="_blank">
               <i class="icon fa-brands fa-github"></i>
             </a>
           </li>
         </ul>
 
-        <!-- <div class="header-sm">
-          <a
-            rel="noopener"
-            href="https://linkedin.com/in/isaac-del-castillo-5a8a76204"
-            target="_blank"
-          >
-            <div class="header-sm-linkedin"></div>
-          </a>
-          <a rel="noopener" href="https://github.com/IsaacDC" target="_blank">
-            <div class="header-sm-github"></div>
-          </a>
-          <a href="mailto:isaacdc03@hotmail.com" target="_blank">
-            <div class="header-sm-email"></div>
-          </a>
-        </div> -->
         <button class="hamburger--spring" type="button">
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -207,7 +218,7 @@
       </section>
 
       <!-- Footer -->
-      <div class="footer">Copyright @ Isaac Del Castillo 2023</div>
+      <section class="footer" id="copyright"></section>
     </div>
 
     <script src="script.js"></script>

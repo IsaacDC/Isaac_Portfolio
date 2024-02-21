@@ -13,6 +13,7 @@ body {
   --tertiary-color: #075f75;
 }
 
+/* Loading Screen */
 .loading-screen {
   width: 100%;
   height: 100%;
@@ -72,6 +73,7 @@ body {
   animation-delay: 2.5s;
 }
 
+/* Content */
 .content {
   display: none;
   opacity: 0;
@@ -110,6 +112,7 @@ p {
   margin: 0;
 }
 
+/* Header */
 .header {
   position: fixed;
   height: 80px;
@@ -122,18 +125,16 @@ p {
   align-items: center;
 }
 
+/* Header Nav */
 .header-nav {
   margin-left: 50px;
-  width: fit-content;
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
 }
 
 .header-nav ul {
   display: flex;
   gap: 1.2rem;
 }
+
 .link {
   font-size: 150%;
   padding: 0.5rem;
@@ -151,10 +152,7 @@ p {
   background: var(--secondary-color);
   border-radius: 5px;
   transform: scaleX(0);
-  transition: all 0.6s ease;
-}
-
-.link::before {
+  transition: all 0.5s ease;
   bottom: 0;
   left: 0;
 }
@@ -167,13 +165,27 @@ p {
   color: var(--secondary-color);
 }
 
+/* Header Social Media */
+.header-sm {
+  margin-right: 50px;
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
 .item a {
-  width: 4.8rem;
-  height: 4.8rem;
+  text-decoration: none;
+  width: 3rem;
+  height: 3rem;
   background-color: #f0f9fe;
-  border: 3px solid white;
-  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   z-index: 1;
+  border: 3px solid #f0f9fe;
+  overflow: hidden;
 }
 
 .item a::before {
@@ -181,43 +193,40 @@ p {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: var(--primary-color);
+  background: var(--bg-color);
   z-index: 0;
+  scale: 1 0;
+  transform-origin: bottom;
+  transition: scale 0.5s ease;
 }
 
-.header-sm {
-  height: 100%;
-  padding-right: 3em;
-  width: fit-content;
-  display: flex;
-  column-gap: 2em;
-  align-items: center;
+.item:hover a::before {
+  scale: 1 1;
 }
 
-.header-sm-linkedin {
-  width: 50px;
-  height: 50px;
-  background-image: url(../images/linkedin.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+.icon {
+  font-size: 2rem;
+  color: hsl(203, 92%, 8%);
+  transition: 0.5s ease;
+  z-index: 2;
 }
 
-.header-sm-github {
-  width: 50px;
-  height: 50px;
-  background-image: url(../images/github.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+.item a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
 }
 
-.header-sm-email {
-  width: 50px;
-  height: 50px;
-  background-image: url(../images/email.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+.item:nth-child(1) {
+  --bg-color: #2682c4;
+}
+.item:nth-child(2) {
+  --bg-color: #0077b5;
+}
+.item:nth-child(3) {
+  --bg-color: black;
 }
 
+/* Skills */
 .skills {
   width: 100%;
   padding: 2em 7em;
@@ -255,6 +264,7 @@ p {
   object-fit: cover;
 }
 
+/* Experience */
 .experience {
   width: 100%;
   background: linear-gradient(to right, black, #005b70);
@@ -265,6 +275,7 @@ p {
   padding: 5em 6em;
 }
 
+/* Projects */
 .projects {
   width: 100%;
   color: var(--tertiary-color);
@@ -279,6 +290,7 @@ p {
   color: var(--tertiary-color);
 }
 
+/* Footer */
 .footer {
   padding: 30px;
   background: linear-gradient(to right, black, #005b70);
@@ -287,6 +299,7 @@ p {
   justify-content: center;
 }
 
+/* Burger */
 .burger-menu,
 .hamburger--spring {
   display: none;
@@ -314,7 +327,7 @@ p {
     background-color: var(--tertiary-color);
   }
 
-  .burger-menu ul {
+  .burger-links {
     width: 100%;
     height: call(100vh - 80px);
     padding-top: 80px;
@@ -323,12 +336,12 @@ p {
     justify-content: center;
   }
 
-  .burger-menu ul li {
+  .burger-links li {
     flex-basis: 100%;
     border-bottom: 2px solid var(--primary-color);
   }
 
-  .burger-menu ul li a {
+  .burger-links li a {
     display: block;
     color: white;
     height: 100%;
@@ -339,31 +352,21 @@ p {
   }
 
   .burger-sm {
-    padding: 2em;
+    padding: 2em 0;
     gap: 10%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+  }
+
+  .item a{
+    height: 4rem;
+    width: 4rem;
   }
 
   .header {
     justify-content: right;
-  }
-
-  .header-sm-linkedin {
-    width: 70px;
-    height: 70px;
-  }
-
-  .header-sm-github {
-    width: 70px;
-    height: 70px;
-  }
-
-  .header-sm-email {
-    width: 70px;
-    height: 70px;
   }
 
   h1 {
@@ -394,6 +397,9 @@ p {
     font-size: 900%;
   }
 
+  .header-nav ul{
+    gap: .5rem;
+  }
   .header-nav ul li a {
     font-size: 120%;
   }

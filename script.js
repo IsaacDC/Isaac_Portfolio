@@ -30,3 +30,16 @@ burgerBtn.addEventListener('click', function(){
     isBurgerOpen = false;
   }
 });
+
+    window.addEventListener('load', onLoad);
+
+    function onLoad () {
+      const copyrightEl = document.getElementById('copyright');
+
+      if (copyrightEl) {
+        const currentYear = new Date().getFullYear();
+        const copyrightText = `Copyright &copy; ${currentYear} Isaac Del Castillo`;
+
+        copyrightEl.innerHTML = copyrightText;
+      }
+    }
