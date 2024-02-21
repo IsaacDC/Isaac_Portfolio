@@ -1,0 +1,168 @@
+main {
+  height: calc(100vh - 80px);
+  width: 100%;
+  margin-top: 80px;
+  background-image: url(../images/isaac-removebg.png),linear-gradient(to right, black, #005b70);
+  background-size: 100vh, cover;
+  background-repeat: no-repeat;
+  background-position: left bottom, center;
+  display: flex;
+  flex-direction: column;
+  gap: 6em;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+main .aboutme-welcome {
+  text-align: center;
+}
+
+.education {
+  border-left: 4px solid var(--secondary-color);
+  padding-left: 1em;
+}
+
+.education h1 {
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+/* MOBILE VERSION*/
+@media only screen and (max-width: 600px) {
+
+  main {
+    background-position: bottom center;
+    background-size: 70vh;
+  }
+
+  .aboutme {
+    padding-bottom: 37vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+
+  main .aboutme-welcome {
+    position: static;
+  }
+
+  main .aboutme-welcome h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  main p {
+    display: none;
+  }
+
+  main .education {
+    position: static;
+  }
+
+  .education{
+    border: none;
+    width: 100%;
+  }
+
+  .education h1{
+    text-decoration-color: var(--secondary-color) ;
+    text-decoration-thickness: 4px ;
+  }
+  
+}
+
+/* TABLET VERSION */
+@media screen and (min-width: 601px) and (max-width: 768px) {
+
+  main {
+    background-position: bottom center, center;
+    background-size: 80vh, cover;
+  }
+
+  .aboutme {
+    padding-bottom: 37vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+
+  main .aboutme-welcome {
+    position: static;
+  }
+
+  main .aboutme-welcome h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  main .education {
+    position: static;
+  }
+}
+
+/* SMALL LAPTOPS */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+
+    main {
+      background-position: bottom center, center;
+      background-size: 90vh, cover;
+    }
+
+    .aboutme {
+      padding-bottom: 37vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1em;
+    }
+
+    main .aboutme-welcome {
+      position: static;
+    }
+
+    main .aboutme-welcome h1 {
+      font-size: 40px;
+      text-align: center;
+    }
+
+    main .education {
+      position: static;
+    }
+}
+
+/* MEDIUM LAPTOPS */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+
+  main {
+    background-position: bottom center;
+  }
+
+  .aboutme {
+    padding-bottom: 37vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+
+  main .aboutme-welcome {
+    position: static;
+  }
+
+  main .aboutme-welcome h1 {
+    font-size: 60px;
+    text-align: center;
+  }
+
+  main .education {
+    position: static;
+  }
+}
+

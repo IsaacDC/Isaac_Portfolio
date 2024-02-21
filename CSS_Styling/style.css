@@ -1,0 +1,407 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+}
+
+:root {
+  --primary-color: #80fefd;
+  --secondary-color: #ff8000;
+  --tertiary-color: #075f75;
+}
+
+.loading-screen {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loading-screen ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-screen ul li {
+  font-family: 'Orbitron';
+  color: #000000;
+  font-size: 1300%;
+  letter-spacing: 15px;
+  text-shadow: none;
+  animation: animate 4s ease-in-out forwards;
+}
+
+@keyframes animate {
+  0% {
+    text-shadow: none;
+  }
+
+  100% {
+    color: var(--primary-color);
+    text-shadow: 0 0 100px var(--primary-color), 0 0 100px var(--primary-color);
+  }
+}
+
+.loading-screen ul li:nth-child(1) {
+  animation-delay: .5s;
+}
+
+.loading-screen ul li:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.loading-screen ul li:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+.loading-screen ul li:nth-child(4) {
+  animation-delay: 2s;
+}
+
+.loading-screen ul li:nth-child(5) {
+  animation-delay: 2.5s;
+}
+
+.content {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.content.show {
+  display: block;
+  opacity: 1;
+}
+
+a {
+  cursor: pointer;
+}
+
+h1 {
+  font-family: 'Orbitron', Roboto;
+  font-size: 300%;
+  color: white;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+p {
+  color: white;
+  font-size: 120%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  position: fixed;
+  height: 80px;
+  color: black;
+  width: 100%;
+  z-index: 1000;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.header-nav {
+  margin-left: 50px;
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.header-nav ul {
+  height: 100%;
+}
+
+.header-nav ul li {
+  display: inline;
+  float: left;
+}
+
+.header-nav ul li a {
+  font-size: 150%;
+  padding: 0 10px;
+  line-height: 60px;
+  color: black;
+  display: block;
+  height: 100%;
+  font-weight: 700;
+}
+
+.header-nav ul li a:hover {
+  color: var(--secondary-color);
+  height: 100%;
+}
+
+.header-sm {
+  height: 100%;
+  padding-right: 3em;
+  width: fit-content;
+  display: flex;
+  column-gap: 1em;
+  align-items: center;
+}
+
+.header-sm-linkedin {
+  width: 50px;
+  height: 50px;
+  background-image: url(../images/linkedin.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-sm-github {
+  width: 50px;
+  height: 50px;
+  background-image: url(../images/github.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-sm-email {
+  width: 50px;
+  height: 50px;
+  background-image: url(../images/email.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.skills {
+  width: 100%;
+  padding: 2em 7em;
+  text-align: center;
+}
+
+.skills h1 {
+  color: var(--tertiary-color);
+}
+
+.card-container {
+  width: 100%;
+  column-gap: 3em;
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  height: 11vh;
+  width: 11vh;
+  text-align: center;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  border: 3px solid var(--primary-color);
+  object-fit: cover;
+}
+
+.experience {
+  width: 100%;
+  background: linear-gradient(to right, black, #005b70);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  padding: 5em 6em;
+}
+
+.projects {
+  width: 100%;
+  color: var(--tertiary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5em 6em;
+}
+
+.projects h1,
+.projects h2 {
+  color: var(--tertiary-color);
+}
+
+.footer {
+  padding: 30px;
+  background: linear-gradient(to right, black, #005b70);
+  display: flex;
+  color: white;
+  justify-content: center;
+}
+
+.burger-menu,
+.hamburger--spring {
+  display: none;
+}
+
+/* MOBILE VERSION*/
+@media only screen and (max-width: 600px) {
+
+  .loading-screen ul li {
+    font-size: 500%;
+  }
+
+  .hamburger--spring{
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .burger-menu {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 900;
+    background-color: var(--tertiary-color);
+  }
+
+  .burger-menu ul {
+    width: 100%;
+    height: call(100vh - 80px);
+    padding-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .burger-menu ul li {
+    flex-basis: 100%;
+    border-bottom: 2px solid var(--primary-color);
+
+  }
+
+  .burger-menu ul li a {
+    display: block;
+    color: white;
+    height: 100%;
+    font-size: 2rem;
+    padding: 30px 0;
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .burger-sm {
+    padding: 2em;
+    gap: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header {
+    justify-content: right;
+  }
+
+  .header-sm-linkedin {
+    width: 70px;
+    height: 70px;
+  }
+
+  .header-sm-github {
+    width: 70px;
+    height: 70px;
+  }
+
+  .header-sm-email {
+    width: 70px;
+    height: 70px;
+  }
+
+  h1 {
+    font-size: 200%;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .header-sm {
+    display: none;
+  }
+
+  .skills {
+    padding: 0;
+  }
+
+  .card-container {
+    margin: 1em 0;
+    flex-wrap: wrap;
+  }
+
+
+}
+
+/* TABLET VERSION */
+@media screen and (min-width: 601px) and (max-width: 768px) {
+
+  .loading-screen ul li {
+    font-size: 900%;
+  }
+
+  .header-nav ul li a{
+    font-size: 120%;
+  }
+
+  .skills {
+    padding: 0;
+  }
+
+  .card-container {
+    margin: 1em 0;
+    column-gap: 2em;
+    flex-wrap: wrap;
+  }
+}
+
+/* SMALL LAPTOPS */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+
+  .loading-screen ul li {
+    font-size: 1000%;
+  }
+
+  .skills {
+    padding: 0;
+  }
+
+  .card-container {
+    margin: 1em 0;
+    column-gap: 2em;
+    flex-wrap: wrap;
+  }
+}
+
+/* MEDIUM LAPTOPS */
+/* @media screen and (min-width: 993px) and (max-width: 1200px) {
+
+} */

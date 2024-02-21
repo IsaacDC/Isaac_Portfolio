@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS_Styling/reset.css" />
+    <link rel="stylesheet" href="CSS_Styling/style.css" />
+    <link rel="stylesheet" href="CSS_Styling/index.css" />
+    <link href="CSS_Styling/hamburgers.css" rel="stylesheet" />
+
+    <title>Isaac Del Castillo Portfolio</title>
+  </head>
+
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+      <ul>
+        <li class="blinking">I</li>
+        <li class="blinking">S</li>
+        <li class="blinking">A</li>
+        <li class="blinking">A</li>
+        <li class="blinking">C</li>
+      </ul>
+    </div>
+
+    <div class="content" id="content">
+      <!-- Burger Menu Start -->
+      <nav class="burger-menu">
+        <ul>
+          <li><a href="#aboutme">About Me</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+        </ul>
+        <div class="burger-sm">
+          <a
+            rel="noopener"
+            href="https://linkedin.com/in/isaac-del-castillo-5a8a76204"
+            target="_blank"
+          >
+            <div class="header-sm-linkedin"></div>
+          </a>
+          <a rel="noopener" href="https://github.com/IsaacDC" target="_blank">
+            <div class="header-sm-github"></div>
+          </a>
+          <a href="mailto:isaacdc03@hotmail.com" target="_blank">
+            <div class="header-sm-email"></div>
+          </a>
+        </div>
+      </nav>
+      <!-- Burger Menu Stop -->
+
+      <!-- Website Header -->
+      <header class="header">
+        <nav class="header-nav">
+          <ul>
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+          </ul>
+        </nav>
+
+        <!-- Social Media -->
+        <div class="header-sm">
+          <a
+            rel="noopener"
+            href="https://linkedin.com/in/isaac-del-castillo-5a8a76204"
+            target="_blank"
+          >
+            <div class="header-sm-linkedin"></div>
+          </a>
+          <a rel="noopener" href="https://github.com/IsaacDC" target="_blank">
+            <div class="header-sm-github"></div>
+          </a>
+          <a href="mailto:isaacdc03@hotmail.com" target="_blank">
+            <div class="header-sm-email"></div>
+          </a>
+        </div>
+        <button class="hamburger--spring" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </header>
+
+      <!-- About Me / Education -->
+      <main class="aboutme" id="aboutme">
+        <div class="aboutme-welcome">
+          <h1>isaac Del Castillo</h1>
+          <p>
+            Welcome to my portfolio! <br />
+            I am a web developer based in Miami.<br />I am passionate about
+            creating beautiful<br />and functional websites.
+          </p>
+        </div>
+
+        <!-- Education -->
+        <!-- <div class="education" id="education">
+      <h1>Education</h1>
+      <h2>Florida International University</h2>
+      <ul>
+        <li>GPA: 3.27</li>
+        <li>Relevant Course Work: Data Structures, Programming II (Java), Machine Learning, <br>Software
+          Engineering, Database Management,<br> Operating Systems
+        </li>
+      </ul>
+    </div> -->
+      </main>
+
+      <!-- Skills -->
+      <section class="skills" id="skills">
+        <h1><b>Skills</b></h1>
+
+        <div class="card-container">
+          <div class="card">
+            <img src="images/html5.png" alt="HTML 5 Logo" />
+          </div>
+          <div class="card">
+            <img src="images/css3.png" alt="CSS 3 Logo" />
+          </div>
+          <div class="card">
+            <img src="images/javascript.png" alt="JavaScript Logo" />
+          </div>
+
+          <div class="card">
+            <img src="images/java.png" alt="Java Logo" />
+          </div>
+          <div class="card">
+            <img src="images/mysql.png" alt="MySQL Logo" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="experience" id="experience">
+        <h1>Experience</h1>
+        <h2>I.T. Intern</h2>
+        <p>Florida International University | 11200 SW 8th St, Miami, FL</p>
+        <ul>
+          <li>
+            I was part of a team that established a website using VMs, MongoDB,
+            APache, PHP, git, and GitHub. Using languages like HTML, CSS, and
+            javaScript, we amde a temporary Questionarrie website for FIU. My
+            feature was to create an "About Us" page demonstrating the team and
+            where they came from.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Projects -->
+      <section class="projects">
+        <h1>Projects</h1>
+        <h2>
+          <a
+            rel="noopener"
+            href="https://isaacdc.github.io/paymentcalculator/"
+            target="_blank"
+            >Payment Calcualtor</a
+          >
+        </h2>
+        <ul>
+          <li>
+            My team built a calculator that caluclates payments and a
+            downpayment froma user-input subtotal and from the number of
+            paychekcs the user wants to pay throughput their payment period.
+          </li>
+        </ul>
+        <br />
+        <h2>API Integreation and Database Management Project</h2>
+        <ul>
+          <li>
+            My team and i successfully created an API service to support an
+            online web application bookstore. My Team completed the project
+            using the POSTman Restful API, Java, Springboot framework, and
+            MySQL. My personal feature included me creating a User, retreiving,
+            updating and modifying the user/user information, and create a
+            credit card for that specific user, while having it all stored in
+            the database to have POSTman retrieve the data.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Footer -->
+      <div class="footer">Copyright @ Isaac Del Castillo 2023</div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
