@@ -247,8 +247,8 @@ p {
 }
 
 .card {
-  height: 11vh;
-  width: 11vh;
+  height: 15vh;
+  width: 15vh;
   text-align: center;
   gap: 1em;
   display: flex;
@@ -273,6 +273,12 @@ p {
   justify-content: center;
   color: white;
   padding: 5em 6em;
+}
+
+.experience p{
+  display: flex;
+  justify-content: space-between;
+  
 }
 
 /* Projects */
@@ -383,6 +389,7 @@ p {
 
   .skills {
     padding: 0;
+    padding-top: 10px;
   }
 
   .card-container {
