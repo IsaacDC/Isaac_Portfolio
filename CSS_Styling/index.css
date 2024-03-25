@@ -1,8 +1,13 @@
+:root {
+  --primary-color: #1E90FF;
+  --secondary-color: #FFDB58;
+  --tertiary-color: #003399;
+}
 main {
   height: calc(100vh - 80px);
   width: 100%;
   margin-top: 80px;
-  background-image: url(../images/isaac-removebg.png),linear-gradient(to right, black, #005b70);
+  background-image: url(../images/isaac-removebg.png),linear-gradient(to right, black, var(--primary-color));
   background-size: 100vh, cover;
   background-repeat: no-repeat;
   background-position: left bottom, center;

@@ -8,9 +8,9 @@ body {
 }
 
 :root {
-  --primary-color: #80fefd;
-  --secondary-color: #ff8000;
-  --tertiary-color: #075f75;
+  --primary-color: #1E90FF;
+  --secondary-color: #FFDB58;
+  --tertiary-color: #003399;
 }
 
 /* Loading Screen */
@@ -267,7 +267,7 @@ p {
 /* Experience */
 .experience {
   width: 100%;
-  background: linear-gradient(to right, black, #005b70);
+  background: linear-gradient(to right, black, var(--primary-color));
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -299,7 +299,7 @@ p {
 /* Footer */
 .footer {
   padding: 30px;
-  background: linear-gradient(to right, black, #005b70);
+  background: linear-gradient(to right, black, var(--primary-color));
   display: flex;
   color: white;
   justify-content: center;
