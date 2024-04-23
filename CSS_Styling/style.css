@@ -240,6 +240,7 @@ p {
 .card-container {
   width: 100%;
   column-gap: 3em;
+  row-gap: 3em;
   margin: 1em;
   display: flex;
   justify-content: center;
@@ -395,6 +396,14 @@ p {
   .card-container {
     margin: 1em 0;
     flex-wrap: wrap;
+  }
+
+  .experience, .projects{
+    padding: 4em 2em;
+  }
+
+  .experience span{
+    text-align: right;
   }
 }
 
