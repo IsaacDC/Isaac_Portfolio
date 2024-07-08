@@ -7,6 +7,7 @@ function loadingAnimationComplete() {
   content.classList.add("show");
   loadingScreen.style.opacity = "0";
   loadingScreen.style.visibility = "hidden";
+
 }
 
 listItems[listItems.length - 1].addEventListener(
@@ -14,34 +15,21 @@ listItems[listItems.length - 1].addEventListener(
   loadingAnimationComplete
 );
 
-// Burger Button
-let burgerBtn = document.querySelector(".hamburger--spring");
-let burgerMenu = document.querySelector(".burger-menu");
-
-let isBurgerOpen = false;
-
-burgerBtn.addEventListener("click", function () {
-  if (!isBurgerOpen) {
-    burgerMenu.style.display = "block";
-    burgerBtn.classList.add("is-active");
-    isBurgerOpen = true;
-  } else {
-    burgerMenu.style.display = "none";
-    burgerBtn.classList.remove("is-active");
-    isBurgerOpen = false;
-  }
-});
-
 window.addEventListener("load", onLoad);
 
 //Footer Date
 function onLoad() {
-  const copyrightEl = document.getElementById("copyright");
+  const copyrightEl = document.getElementById("copyrightText");
 
   if (copyrightEl) {
     const currentYear = new Date().getFullYear();
-    const copyrightText = `Copyright &copy; ${currentYear} Isaac Del Castillo`;
+    const copyrightText = `@ ${currentYear} Isaac Del Castillo`;
 
     copyrightEl.innerHTML = copyrightText;
   }
 }
+
+const underlineProjects = document.querySelectorAll(".projects h2");
+underlineProjects.forEach((h2) => {
+  h2.style.textDecoration = "underline";
+});

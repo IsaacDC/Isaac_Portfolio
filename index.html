@@ -1,221 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="CSS_Styling/reset.css" />
+    <link rel="stylesheet" href="CSS_Styling/style.css" />
+    <link rel="stylesheet" href="CSS_Styling/main.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="CSS_Styling/reset.css" />
-  <link rel="stylesheet" href="CSS_Styling/style.css" />
-  <link rel="stylesheet" href="CSS_Styling/index.css" />
-  <link href="CSS_Styling/hamburgers.css" rel="stylesheet" />
+    <title>Isaac Del Castillo Portfolio</title>
+  </head>
 
-  <title>Isaac Del Castillo Portfolio</title>
-</head>
-
-<body>
-  <!-- Loading Screen -->
-  <div class="loading-screen">
-    <ul>
-      <li>I</li>
-      <li>S</li>
-      <li>A</li>
-      <li>A</li>
-      <li>C</li>
-    </ul>
-  </div>
-
-  <div class="content" id="content">
-    <!-- Burger Menu Start -->
-    <nav class="burger-menu">
-      <ul class="burger-links">
-        <li><a href="#aboutme">About Me</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+      <ul>
+        <li>I</li>
+        <li>S</li>
+        <li>A</li>
+        <li>A</li>
+        <li>C</li>
       </ul>
-      <ul class="burger-sm">
-        <li class="item">
-          <a href="mailto:isaacdc03@hotmail.com" target="_blank">
-            <i class="icon fa fa-envelope"></i>
-          </a>
-        </li>
-        <li class="item">
-          <a rel="noopener" href="https://linkedin.com/in/isaac-del-castillo-5a8a76204" target="_blank">
-            <i class="icon fa-brands fa-linkedin"></i>
-          </a>
-        </li>
-        <li class="item">
-          <a rel="noopener" href="https://github.com/IsaacDC" target="_blank">
-            <i class="icon fa-brands fa-github"></i>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <!-- Burger Menu Stop -->
+    </div>
 
-    <!-- Website Header -->
-    <header class="header">
-      <nav class="header-nav">
-        <ul>
-          <li><a href="#aboutme" class="link">About Me</a></li>
-          <li><a href="#education" class="link">Education</a></li>
-          <li><a href="#skills" class="link">Skills</a></li>
-          <li><a href="#experience" class="link">Experience</a></li>
+    <div class="content" id="content">
+      <!-- Website Header -->
+      <header class="header">
+        <nav class="header-nav">
+          <ul>
+            <li><a href="#skills" class="link">Skills</a></li>
+            <li><a href="#experience" class="link">Experience</a></li>
+            <li><a href="#projects" class="link">Projects</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header Social Media -->
+        <ul class="header-sm">
+          <li class="sm-icon">
+            <a href="mailto:isaacdc03@hotmail.com" target="_blank">
+              <i class="icon fa fa-envelope"></i>
+            </a>
+          </li>
+          <li class="sm-icon">
+            <a
+              rel="noopener"
+              href="https://linkedin.com/in/isaac-del-castillo-5a8a76204"
+              target="_blank"
+            >
+              <i class="icon fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="sm-icon">
+            <a rel="noopener" href="https://github.com/IsaacDC" target="_blank">
+              <i class="icon fa-brands fa-github"></i>
+            </a>
+          </li>
         </ul>
-      </nav>
+      </header>
 
-      <!-- Social Media -->
-      <ul class="header-sm">
-        <li class="item">
-          <a href="mailto:isaacdc03@hotmail.com" target="_blank">
-            <i class="icon fa fa-envelope"></i>
-          </a>
-        </li>
-        <li class="item">
-          <a rel="noopener" href="https://linkedin.com/in/isaac-del-castillo-5a8a76204" target="_blank">
-            <i class="icon fa-brands fa-linkedin"></i>
-          </a>
-        </li>
-        <li class="item">
-          <a rel="noopener" href="https://github.com/IsaacDC" target="_blank">
-            <i class="icon fa-brands fa-github"></i>
-          </a>
-        </li>
-      </ul>
+      <!-- About Me -->
+      <main class="aboutme" id="aboutme">
+        <div class="main-content">
+          <h1>isaac Del Castillo</h1>
+          <p>
+            Welcome to my portfolio! <br />
+            I am a web developer based in Miami.<br />I am passionate about
+            creating beautiful<br />and functional websites.
+          </p>
+        </div>
+      </main>
 
-      <button class="hamburger--spring" type="button">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>
-    </header>
+      <!-- Skills -->
+      <section class="skills" id="skills">
+        <h1><b>Skills</b></h1>
 
-    <!-- About Me / Education -->
-    <main class="aboutme" id="aboutme">
-      <div class="aboutme-welcome">
-        <h1>isaac Del Castillo</h1>
+        <div class="card-container">
+          <div class="card">
+            <img src="images/html5.png" alt="HTML 5 Logo" />
+          </div>
+          <div class="card">
+            <img src="images/css3.png" alt="CSS 3 Logo" />
+          </div>
+          <div class="card">
+            <img src="images/javascript.png" alt="JavaScript Logo" />
+          </div>
+          <div class="card">
+            <img src="images/java.png" alt="Java Logo" />
+          </div>
+          <div class="card">
+            <img src="images/mysql.png" alt="MySQL Logo" />
+          </div>
+          <div class="card">
+            <img src="images/python.png" alt="python Logo" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="experience" id="experience">
+        <h1>Experience</h1>
+        <h2>I.T. Intern</h2>
         <p>
-          Welcome to my portfolio! <br />
-          I am a web developer based in Miami.<br />I am passionate about
-          creating beautiful<br />and functional websites.
+          Florida International University | 11200 SW 8th St, Miami, FL
+          <span>July 2019 - August 2019</span>
         </p>
-      </div>
-    </main>
+        <ul>
+          <li>
+            I was part of a team that established a website using VMs, MongoDB,
+            Apache, PHP, git, and GitHub. Using languages like HTML, CSS, and
+            JavaScript, we made a temporary Questionnaire website for FIU. My
+            feature was to create an "About Us" page demonstrating the team and
+            where they came from.
+          </li>
+        </ul>
+        <br />
 
-    <!-- Skills -->
-    <section class="skills" id="skills">
-      <h1><b>Skills</b></h1>
+        <h2>Student IT Systems Assistant - Media Technology Support</h2>
+        <p>
+          Florida International University | 11200 SW 8th St, Miami, FL
+          <span>March 2024 - Current</span>
+        </p>
+        <ul>
+          <li>
+            I assist with various activities, such as debugging network
+            connectivity issues and diagnosing hardware and software issues. I
+            also help with hardware installation, website management, and
+            software updates. In addition, I work with a variety of programming
+            languages and operating systems.
+          </li>
+        </ul>
+      </section>
 
-      <div class="card-container">
-        <div class="card">
-          <img src="images/html5.png" alt="HTML 5 Logo" />
-        </div>
-        <div class="card">
-          <img src="images/css3.png" alt="CSS 3 Logo" />
-        </div>
-        <div class="card">
-          <img src="images/javascript.png" alt="JavaScript Logo" />
-        </div>
-        <div class="card">
-          <img src="images/java.png" alt="Java Logo" />
-        </div>
-        <div class="card">
-          <img src="images/mysql.png" alt="MySQL Logo" />
-        </div>
-        <div class="card">
-          <img src="images/python.png" alt="python Logo" />
-        </div>
-      </div>
-    </section>
+      <!-- Projects -->
+      <section class="projects" id="projects">
+        <h1>Projects</h1>
+        <h2>
+          <a
+            rel="noopener"
+            href="https://isaacdc.github.io/paymentcalculator/"
+            target="_blank"
+            >Payment Calculator</a
+          >
+        </h2>
+        <ul>
+          <li>
+            My team built a calculator that calculates payments and a down
+            payment from a user-input subtotal and from the number of paychecks
+            the user wants to pay throughput their payment period.
+          </li>
+        </ul>
+        <br />
+        <h2>
+          <a
+            rel="noopener"
+            href="https://github.com/IsaacDC/CEN-4010-Group-6-Team-Project-Geek-Text"
+            target="_blank"
+            >API Integration and Database Management Project</a
+          >
+        </h2>
+        <ul>
+          <li>
+            My team and I successfully created an API service to support an
+            online web application bookstore. My Team completed the project
+            using the POSTman Restful API, Java, SpringBoot framework, and
+            MySQL. My personal feature included me creating a User, retrieving,
+            updating and modifying the user/user information, and create a
+            credit card for that specific user, while having it all stored in
+            the database to have POSTman retrieve the data.
+          </li>
+        </ul>
+        <br />
+        <h2>
+          <a
+            rel="noopener"
+            href="https://gitlab.com/cap4612/Machine-Learning-Project"
+            target="_blank"
+            >Real-Time Multilingual Translation Application</a
+          >
+        </h2>
+        <ul>
+          <li>
+            This project focuses on training a machine translation model using
+            the MT5 (Multilingual Translation 5) model, which is part of the
+            Hugging Face Transformers library. The goal is to develop a robust
+            translation system capable of translating text between multiple
+            languages in real-time, between two users who are using the
+            application at the same time.
+          </li>
+        </ul>
+      </section>
 
-    <!-- Experience -->
-    <section class="experience" id="experience">
-      <h1>Experience</h1>
-      <h2>I.T. Intern</h2>
-      <p>
-        Florida International University | 11200 SW 8th St, Miami, FL
-        <span>July 2019 - August 2019</span>
-      </p>
-      <ul>
-        <li>
-          I was part of a team that established a website using VMs, MongoDB,
-          APache, PHP, git, and GitHub. Using languages like HTML, CSS, and
-          javaScript, we amde a temporary Questionarrie website for FIU. My
-          feature was to create an "About Us" page demonstrating the team and
-          where they came from.
-        </li>
-      </ul>
-      <br />
+      <!-- Footer -->
+      <section class="footer" id="copyright">
+        <ul class="footer-sm">
+          <li class="sm-icon">
+            <a href="mailto:isaacdc03@hotmail.com" target="_blank">
+              <i class="icon fa fa-envelope"></i>
+            </a>
+          </li>
+          <li class="sm-icon">
+            <a
+              rel="noopener"
+              href="https://linkedin.com/in/isaac-del-castillo-5a8a76204"
+              target="_blank"
+            >
+              <i class="icon fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="sm-icon">
+            <a rel="noopener" href="https://github.com/IsaacDC" target="_blank">
+              <i class="icon fa-brands fa-github"></i>
+            </a>
+          </li>
+        </ul>
+        <p id="copyrightText"></p>
+      </section>
+    </div>
 
-      <h2>Student IT Systems Assistant - Media Technology Support</h2>
-      <p>
-        Florida International University | 11200 SW 8th St, Miami, FL
-        <span>March 2024 - Current</span>
-      </p>
-      <ul>
-        <li>
-          I assist with various activities, such as debugging network
-          connectivity issues and diagnosing hardware and software issues. I
-          also help with hardware installation, website management, and
-          software updates. In addition, I work with a variety of programming
-          languages and operating systems.
-        </li>
-      </ul>
-    </section>
-
-    <!-- Projects -->
-    <section class="projects">
-      <h1>Projects</h1>
-      <h2>
-        <a rel="noopener" href="https://isaacdc.github.io/paymentcalculator/" target="_blank">Payment Calcualtor</a>
-      </h2>
-      <ul>
-        <li>
-          My team built a calculator that caluclates payments and a
-          downpayment froma user-input subtotal and from the number of
-          paychekcs the user wants to pay throughput their payment period.
-        </li>
-      </ul>
-      <br />
-      <h2>
-        <a rel="noopener" href="https://github.com/IsaacDC/CEN-4010-Group-6-Team-Project-Geek-Text" target="_blank">API
-          Integreation and Database Management Project</a>
-      </h2>
-      <ul>
-        <li>
-          My team and I successfully created an API service to support an
-          online web application bookstore. My Team completed the project
-          using the POSTman Restful API, Java, Springboot framework, and
-          MySQL. My personal feature included me creating a User, retreiving,
-          updating and modifying the user/user information, and create a
-          credit card for that specific user, while having it all stored in
-          the database to have POSTman retrieve the data.
-        </li>
-      </ul>
-      <br />
-      <h2> <a rel="noopener" href="https://gitlab.com/cap4612/Machine-Learning-Project" target="_blank">Real-Time
-          Multilingual Translation Application</a></h2>
-      <ul>
-        <li>This project focuses on training a machine translation model using the MT5 (Multilingual Translation 5)
-          model, which is part of the Hugging Face Transformers library. The goal is to develop a robust translation
-          system capable of translating text between multiple languages in real-time, between two users who are using
-          the application at the same time. </li>
-      </ul>
-    </section>
-
-    <!-- Footer -->
-    <section class="footer" id="copyright"></section>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-
+    <script src="./js/script.js"></script>
+    <script src="./js/canvas.js"></script>
+  </body>
 </html>
