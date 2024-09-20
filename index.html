@@ -4,14 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      crossorigin
-      src="https://unpkg.com/react@18/umd/react.development.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
-    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,17 +26,6 @@
   </head>
 
   <body>
-    <!-- Loading Screen -->
-    <div class="loading-screen">
-      <ul>
-        <li>I</li>
-        <li>S</li>
-        <li>A</li>
-        <li>A</li>
-        <li>C</li>
-      </ul>
-    </div>
-
     <div class="content" id="content">
       <!-- Website Header -->
       <header class="header">
@@ -121,6 +102,22 @@
       <!-- Experience -->
       <section class="experience" id="experience">
         <h1>Experience</h1>
+        <h2>It Systems Assistant</h2>
+        <p>
+          Florida International University | 11200 SW 8th St, Miami, FL
+          <span>March 2024 - Present</span>
+        </p>
+        <ul>
+          <li>
+            Assist with various activities, such as debugging network
+            connectivity issues and diagnosing hardware and software problems.
+            Helped with hardware installation, website management, and software
+            updates. Additionally, worked with a variety of programming
+            languages and operating systems.
+          </li>
+        </ul>
+        <br />
+
         <h2>I.T. Intern</h2>
         <p>
           Florida International University | 11200 SW 8th St, Miami, FL
@@ -128,27 +125,10 @@
         </p>
         <ul>
           <li>
-            I was part of a team that established a website using VMs, MongoDB,
-            Apache, PHP, git, and GitHub. Using languages like HTML, CSS, and
-            JavaScript, we made a temporary Questionnaire website for FIU. My
-            feature was to create an "About Us" page demonstrating the team and
-            where they came from.
-          </li>
-        </ul>
-        <br />
-
-        <h2>Student IT Systems Assistant - Media Technology Support</h2>
-        <p>
-          Florida International University | 11200 SW 8th St, Miami, FL
-          <span>March 2024 - Current</span>
-        </p>
-        <ul>
-          <li>
-            I assist with various activities, such as debugging network
-            connectivity issues and diagnosing hardware and software issues. I
-            also help with hardware installation, website management, and
-            software updates. In addition, I work with a variety of programming
-            languages and operating systems.
+            Learned the fundamentals of front-end development, including HTML,
+            CSS, and JavaScript. Collaborated with a team to apply this
+            knowledge by developing a website that integrated these core
+            technologies.
           </li>
         </ul>
       </section>
@@ -159,16 +139,20 @@
         <h2>
           <a
             rel="noopener"
-            href="https://isaacdc.github.io/paymentcalculator/"
+            href="https://github.com/IsaacDC/drawing_canvas"
             target="_blank"
-            >Payment Calculator</a
-          >
+            >Live Collaborative Drawing Canvas
+          </a>
         </h2>
         <ul>
           <li>
-            My team built a calculator that calculates payments and a down
-            payment from a user-input subtotal and from the number of paychecks
-            the user wants to pay throughput their payment period.
+            Developed a real-time collaborative drawing application leveraging
+            Node.js, Express, and Socket.IO, enabling multiple users to draw
+            simultaneously on a shared canvas. Implemented WebSocket
+            communication for live updates, utilized SQLite and MySql for
+            session management and data persistence, and optimized for seamless
+            performance. Integrated dynamic event handling for user interactions
+            and ensured cross-browser compatibility with HTML5 and JavaScript.
           </li>
         </ul>
         <br />
@@ -182,13 +166,12 @@
         </h2>
         <ul>
           <li>
-            My team and I successfully created an API service to support an
-            online web application bookstore. My Team completed the project
-            using the POSTman Restful API, Java, SpringBoot framework, and
-            MySQL. My personal feature included me creating a User, retrieving,
-            updating and modifying the user/user information, and create a
-            credit card for that specific user, while having it all stored in
-            the database to have POSTman retrieve the data.
+            Created an API service to support a mock online web application
+            bookstore. My team completed the project using the POSTman API
+            platform, Java, Spring, and MySQL. My feature included creating a
+            User, retrieving that user's info, creating a credit card for that
+            user, and having it all stored in the database to have Postman
+            retrieve that data through different endpoints.
           </li>
         </ul>
         <br />
@@ -208,6 +191,22 @@
             translation system capable of translating text between multiple
             languages in real-time, between two users who are using the
             application at the same time.
+          </li>
+        </ul>
+        <br />
+        <h2>
+          <a rel="noopener" href="" target="_blank"> Neighborhood Connect</a>
+        </h2>
+        <ul>
+          <li>
+            Developed an iOS app using SwiftUI enabling users to join or create
+            neighborhood groups within specified zip codes and organize local
+            events. Integrated Firebase Authentication for user sign-up and
+            login, with group chats, events, and groups stored in Firebase
+            Realtime Database. Implemented Apple Maps API to display event
+            locations, providing users with directions and hosting details. The
+            app fosters local community engagement through real-time interaction
+            and event coordination.
           </li>
         </ul>
       </section>
@@ -240,6 +239,7 @@
     </div>
 
     <script src="./js/script.js"></script>
-    <script src="./js/canvas.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/bg.js"></script>
   </body>
 </html>
