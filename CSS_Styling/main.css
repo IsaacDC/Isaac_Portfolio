@@ -1,8 +1,5 @@
-:root {
-  --primary-color: #1e90ff;
-  --secondary-color: #ffdb58;
-  --tertiary-color: #003399;
-}
+@import './style.css';
+
 main {
   height: calc(100vh - clamp(60px, calc(40px + 5vh), 80px));
   width: 100%;
