@@ -10,7 +10,7 @@ function SkillsSection() {
     <>
       <div className="container mt-5" id="skills">
         <h1 className="text-center mb-5">Skills</h1>
-        <div className={styles.cardContainer}>
+        <div className="container row gap-5 justify-content-center">
           <img src={htmlImg} alt="HTML 5 Logo" className={styles.card} />
           <img src={cssImg} alt="CSS Logo" className={styles.card} />
           <img
