@@ -26,7 +26,7 @@ function Experience() {
     },
   ];
   return (
-    <section className="p-5 border-top bg-dark" id="experience">
+    <section className="rounded bg-dark p-5 m-5" id="experience">
       <h1 className="text-center mb-5">Experience</h1>
       {experienceData.map((experience, index) => (
         <div key={index}>

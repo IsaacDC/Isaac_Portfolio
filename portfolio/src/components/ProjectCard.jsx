@@ -3,18 +3,18 @@ import PropTypes from "prop-types";
 
 const ProjectCard = ({ title, description, link, technologies, img }) => {
   return (
-    <div className="card mb-4 p-4">
+    <div className="container text-white mb-4 p-4">
       <div className="row g-0">
         <div className="col-md-8">
           <h4 className="card-title">{title}</h4>
           <p className="card-text">{description}</p>
           {technologies && (
             <div className="d-flex gap-3">
-                {technologies.map((tech, index) => (
-                  <small className="text-muted">
-                    <p key={index}>{tech}</p>
-                  </small>
-                ))}
+              {technologies.map((tech, index) => (
+                <small className="text-light" key={index}>
+                  <p>{tech}</p>
+                </small>
+              ))}
             </div>
           )}
         </div>

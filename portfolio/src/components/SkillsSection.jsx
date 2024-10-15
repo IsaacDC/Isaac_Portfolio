@@ -1,9 +1,9 @@
-import htmlImg from "../assets/images/html.png";
-import cssImg from "../assets/images/css.png";
-import javascriptImg from "../assets/images/javascript.png";
-import javaImg from "../assets/images/java.png";
-import pythonImg from "../assets/images/python.png";
-import mySqlImg from "../assets/images/mysql.png";
+import htmlImg from "../assets/images/skills/html.png";
+import cssImg from "../assets/images/skills/css.png";
+import javascriptImg from "../assets/images/skills/javascript.png";
+import javaImg from "../assets/images/skills/java.png";
+import pythonImg from "../assets/images/skills/python.png";
+import mySqlImg from "../assets/images/skills/mysql.png";
 import styles from "../assets/styles/Skills.module.css";
 function SkillsSection() {
   return (
