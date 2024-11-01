@@ -1,8 +1,11 @@
-.card {
-  background-color: white;
-  width: clamp(80px, calc(60px + 10vw), 130px);
-  height: clamp(80px, calc(60px + 10vw), 130px);
-  border: 3px solid var(--primary-color);
-  border-radius: 18px;
+.skillImg {
+  width: clamp(10px, calc(60px + 10vw), 40px);
+  height: clamp(10px, calc(60px + 10vw), 40px);
   object-fit: cover;
+  padding: 0;
+}
+
+.skillBadge{
+  width:300px;
+  padding: .3rem;
 }

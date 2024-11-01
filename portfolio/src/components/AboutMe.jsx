@@ -1,4 +1,5 @@
 import React from "react";
+import Section from "./Section";
 import styles from "../assets/styles/Socials.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -6,13 +7,10 @@ import { faEnvelope, faFile } from "@fortawesome/free-regular-svg-icons";
 
 function AboutMe() {
   return (
-    <div className="rounded bg-dark text-white m-5 p-5">
-      <div className="card-body">
-        <h1 className="display-4 text-center mb-4">Isaac Del Castillo</h1>
-        <p className="lead">
-          I'm a front-end developer located in Miami, Florida
-        </p>
-      </div>
+    <Section title="Isaac Del Castillo" className="mt-5 mb-3">
+      <p className="lead">
+        I'm a front-end developer located in Miami, Florida
+      </p>
       <ul className="d-flex column p-0 m-0 gap-2">
         <li className={`${styles.smIcon}`} id="githubIcon">
           <a href="https://github.com/IsaacDC">
@@ -35,7 +33,7 @@ function AboutMe() {
           </a>
         </li>
       </ul>
-    </div>
+    </Section>
   );
 }
 

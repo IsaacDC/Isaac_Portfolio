@@ -1,9 +1,6 @@
-:root {
-  --primary-color: #1e90ff;
-  --secondary-color: #ffdb58;
-  --tertiary-color: #003399;
+:root{
+  --tertiary: rgb(30,30,150);
 }
-
 html {
   scroll-behavior: smooth;
   scroll-padding-top: clamp(60px, calc(40px + 5vh), 60px);
@@ -17,12 +14,9 @@ body {
   margin: 0;
   padding: 0;
   font-size: clamp(16px, calc(0.5rem +1vw), 22px);
-  background: hsl(200, 10%, 5%);
-  background-image: linear-gradient(hsl(201, 12%, 24%) 0.1em, transparent 0.1em),
-    linear-gradient(90deg, hsl(201, 12%, 24%) 0.1em, transparent 0.1em);
-  background-size: 3em 3em;
-  background-attachment: fixed;
   color: white;
+  background-color: rgb(10, 10, 10);
+  background-attachment: fixed;
 }
 
 html,
@@ -47,7 +41,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+a {
   font-family: "Orbitron";
   text-transform: uppercase;
 }
@@ -56,8 +51,31 @@ a {
   cursor: pointer;
 }
 
+.bg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .content {
   position: relative;
   z-index: 1;
-  padding: 0 200px 0 200px;
+  max-width: 70%;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media screen and (max-width: 760px) {
+  .content {
+    max-width: 100%;
+  }
 }

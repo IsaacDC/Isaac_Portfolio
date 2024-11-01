@@ -4,26 +4,59 @@ import javascriptImg from "../assets/images/skills/javascript.png";
 import javaImg from "../assets/images/skills/java.png";
 import pythonImg from "../assets/images/skills/python.png";
 import mySqlImg from "../assets/images/skills/mysql.png";
-import styles from "../assets/styles/Skills.module.css";
+import Section from "./Section";
+import { SkillBadge } from "./SkillBadge";
+
+const skillData = [
+  {
+    img: htmlImg,
+    bgColor: "rgba(255,69,0, 0.3)",
+    alt: "HTML5 Logo",
+    skill: "HTML5",
+  },
+  {
+    img: cssImg,
+    bgColor: "rgba(38, 77, 228, 0.3)",
+    alt: "CSS3 Logo",
+    skill: "CSS3",
+  },
+  {
+    img: javascriptImg,
+    alt: "JavaScript Logo",
+    bgColor: "rgba(255,255,0,0.3)",
+    skill: "JavaScript",
+  },
+  {
+    img: javaImg,
+    bgColor: "rgba(255, 255, 255, 0.1)",
+    alt: "Java Logo",
+    skill: "Java",
+  },
+  {
+    img: pythonImg,
+    bgColor: "rgba(55, 123, 235, 0.3)",
+    alt: "Python Logo",
+    skill: "Python",
+  },
+  {
+    img: mySqlImg,
+    bgColor: "rgba(0, 117, 143, 0.3)",
+    alt: "MySQL Logo",
+    skill: "MySQL",
+  },
+];
+
 function SkillsSection() {
   return (
-    <>
-      <div className="container mt-5" id="skills">
-        <h1 className="text-center mb-5">Skills</h1>
-        <div className="container row gap-5 justify-content-center">
-          <img src={htmlImg} alt="HTML 5 Logo" className={styles.card} />
-          <img src={cssImg} alt="CSS Logo" className={styles.card} />
-          <img
-            src={javascriptImg}
-            alt="Javascript Logo"
-            className={styles.card}
-          />
-          <img src={javaImg} alt="java Logo" className={styles.card} />
-          <img src={pythonImg} alt="python Logo" className={styles.card} />
-          <img src={mySqlImg} alt="mysql Logo" className={styles.card} />
-        </div>
+    <Section title="Skills" className="p-0" id="skills">
+      <div className="d-flex gap-3 flex-wrap">
+        {skillData.map((skills, index) => (
+          <div key={index}>
+            <SkillBadge {...skills} />
+          </div>
+        ))}
       </div>
-    </>
+    </Section>
   );
 }
 export default SkillsSection;

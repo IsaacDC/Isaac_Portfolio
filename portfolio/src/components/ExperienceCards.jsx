@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 
 function ExperienceCard({ title, company, location, dates, description }) {
   return (
-    <div className="container text-white mb-4 p-4">
+    <div className="container mb-4 p-4">
       <h4>{title}</h4>
-      <p className="text-light">
+      <p>
         {company} | {location}
         <span className="d-block">{dates}</span>
       </p>

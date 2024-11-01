@@ -1,5 +1,6 @@
 import React from "react";
 import ExperienceCard from "./ExperienceCards";
+import Section from "./Section";
 
 function Experience() {
   const experienceData = [
@@ -26,14 +27,13 @@ function Experience() {
     },
   ];
   return (
-    <section className="rounded bg-dark p-5 m-5" id="experience">
-      <h1 className="text-center mb-5">Experience</h1>
+    <Section title='Experience'id="experience">
       {experienceData.map((experience, index) => (
         <div key={index}>
           <ExperienceCard {...experience} />
         </div>
       ))}
-    </section>
+    </Section>
   );
 }
 
