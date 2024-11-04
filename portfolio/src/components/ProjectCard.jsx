@@ -30,7 +30,7 @@ const ProjectCard = ({ title, description, link, technologies, media }) => {
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className={styles.projectLink}
+              className={`d-inline-block my-2 ${styles.projectLink}`}
             >
               View Project
             </a>
@@ -40,7 +40,11 @@ const ProjectCard = ({ title, description, link, technologies, media }) => {
               {technologies.map((tech, index) => (
                 <small key={index}>
                   <p
-                    className={`d-block p-2 rounded-5 ${styles.technologies}`}
+                    className={`d-block p-2 rounded-5`}
+                    style={{
+                      color: "lightblue",
+                      backgroundColor: "rgb(30,30,150)",
+                    }}
                   >
                     {tech}
                   </p>

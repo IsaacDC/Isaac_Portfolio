@@ -1,9 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
-import styles from '../assets/styles/Section.module.css';
 import "../App.css";
 
 const Section = ({ title, children, className = "" }) => {
-  const defaultStyling = `rounded p-5 bg-dark my-5 ${className} ${styles.section}`.trim();
+  const defaultStyling = `rounded p-5 bg-dark my-5 ${className}`.trim();
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 

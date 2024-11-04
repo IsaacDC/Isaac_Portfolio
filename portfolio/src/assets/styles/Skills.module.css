@@ -4,8 +4,9 @@
   object-fit: cover;
   padding: 0;
 }
-
-.skillBadge{
-  width:300px;
-  padding: .3rem;
+.skillBadge {
+  flex: 1 1 200px; /* Flex-grow, flex-shrink, and base width */
+  min-width: 200px; /* Minimum width for each badge */
+  max-width: 400px; /* Optional max-width to keep badges from getting too large */
 }
+

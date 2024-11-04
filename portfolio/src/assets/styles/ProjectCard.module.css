@@ -1,16 +1,8 @@
 .projectLink {
-  display: inline-block;
-  padding: 20px 0px;
   color: white;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .projectLink:hover {
   color: rgb(150, 150, 150);
-}
-
-.technologies {
-  color: lightblue;
-  background-color: var(--tertiary);
 }

@@ -1,6 +1,4 @@
-:root{
-  --tertiary: rgb(30,30,150);
-}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: clamp(60px, calc(40px + 5vh), 60px);
