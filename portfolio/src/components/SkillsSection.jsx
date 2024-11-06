@@ -54,8 +54,8 @@ const skillData = [
 
 function SkillsSection() {
   return (
-    <Section title="Skills" className="p-0" id="skills">
-      <div className="d-flex gap-3 flex-wrap">
+    <Section title="Skills" id="skills">
+      <div className="d-flex gap-3 flex-wrap mt-4">
         {skillData.map((skills) => (
           <SkillBadge key={skills.skill} {...skills} />
         ))}

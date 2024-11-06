@@ -59,9 +59,7 @@ function Projects() {
   return (
     <Section title="Projects" id="projects">
       {projectsData.map((project, index) => (
-        <div key={index}>
-          <ProjectCard {...project} />
-        </div>
+        <ProjectCard key={index} {...project} />
       ))}
     </Section>
   );

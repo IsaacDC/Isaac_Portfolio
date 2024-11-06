@@ -13,7 +13,7 @@ function Footer() {
   return (
     <>
       <section className="container">
-        <footer className="d-flex flex-wrap justify-content-center align-items-center py-3 my-4 border-top">
+        <footer className="d-flex flex-wrap justify-content-center align-items-center py-3 my-4">
           <div className=" align-items-center" id="copyrightText"></div>
         </footer>
       </section>

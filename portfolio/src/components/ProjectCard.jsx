@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import fadeIn from "../hooks/fadeInHook";
 import PropTypes from "prop-types";
 import styles from "../assets/styles/ProjectCard.module.css";
 import { Modal } from "react-bootstrap";
@@ -7,20 +8,21 @@ const ProjectCard = ({ title, description, link, technologies, media }) => {
   const [showModal, setShowModal] = useState(false);
   const isVideo = media.toLowerCase().endsWith(".mp4");
 
-  const scrollBarWidth =
-    window.innerWidth - document.documentElement.clientWidth;
+  const [isVisible, cardRef] = fadeIn(0.1);
 
   const handleClose = () => {
     setShowModal(false);
   };
   const handleShow = () => {
     setShowModal(true);
-    document.body.style.paddingRight = `${scrollBarWidth}px`;
-    console.log(scrollBarWidth);
   };
 
   return (
-    <div className="container mb-4 p-4">
+    <div
+      ref={cardRef}
+      className={`fade-in container my-5 border-start 
+      ${isVisible ? "is-visible" : ""}`}
+    >
       <div className="row g-0">
         <div className="col-md-8 p-1">
           <h4 className="card-title">{title}</h4>
@@ -43,7 +45,7 @@ const ProjectCard = ({ title, description, link, technologies, media }) => {
                     className={`d-block p-2 rounded-5`}
                     style={{
                       color: "lightblue",
-                      backgroundColor: "rgb(30,30,150)",
+                      backgroundColor: "#03002e",
                     }}
                   >
                     {tech}

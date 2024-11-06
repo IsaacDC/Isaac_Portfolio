@@ -1,9 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
+import fadeIn from "../hooks/fadeInHook";
 
 function ExperienceCard({ title, company, location, dates, description }) {
+  const [isVisible, cardRef] = fadeIn(0.1);
+
   return (
-    <div className="container mb-4 p-4">
+    <div
+      ref={cardRef}
+      className={`border-start container my-5 fade-in ${
+        isVisible ? "is-visible" : ""
+      }`}
+    >
       <h4>{title}</h4>
       <p>
         {company} | {location}

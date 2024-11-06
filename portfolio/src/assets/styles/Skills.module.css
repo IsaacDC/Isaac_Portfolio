@@ -5,8 +5,8 @@
   padding: 0;
 }
 .skillBadge {
-  flex: 1 1 200px; /* Flex-grow, flex-shrink, and base width */
-  min-width: 200px; /* Minimum width for each badge */
-  max-width: 400px; /* Optional max-width to keep badges from getting too large */
+  flex: 1 1 200px;
+  min-width: 200px;
+  max-width: 400px;
 }
 
