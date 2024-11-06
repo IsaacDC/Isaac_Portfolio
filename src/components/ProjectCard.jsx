@@ -33,6 +33,7 @@ const ProjectCard = ({ title, description, link, technologies, media }) => {
               target="_blank"
               rel="noopener noreferrer"
               className={`d-inline-block my-2 ${styles.projectLink}`}
+              
             >
               View Project
             </a>

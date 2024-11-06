@@ -2,7 +2,7 @@ import React from "react";
 import Section from "./Section";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faFile } from "@fortawesome/free-regular-svg-icons";
-import SocialsButton from "./SocialsButton";
+import SocialsCoin from "./SocialsCoin";
 
 const socialMedias = [
   { href: "https://github.com/isaacdc", icon: faGithub },
@@ -24,7 +24,7 @@ function AboutMe() {
       <p className="lead">A software developer located in Miami, Florida</p>
       <ul className="d-flex column p-0 m-0 gap-3">
         {socialMedias.map((socials) => (
-          <SocialsButton key={socials.href} {...socials} />
+          <SocialsCoin key={socials.href} {...socials} />
         ))}
       </ul>
     </Section>
