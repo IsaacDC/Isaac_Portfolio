@@ -13,9 +13,9 @@ function App() {
       <div className="bg-container">
         <div className="content">
           <AboutMe />
+          <SkillsSection />
           <Experience />
           <Projects />
-          <SkillsSection />
           <Footer />
         </div>
       </div>

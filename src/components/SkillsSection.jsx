@@ -22,7 +22,7 @@ const skillData = [
   },
   {
     img: cssImg,
-    bgColor: "rgba(38, 77, 228, 0.3)",
+    bgColor: "rgba(102,	51,	153, 0.3)",
     skill: "CSS3",
   },
   {
@@ -55,7 +55,7 @@ const skillData = [
 function SkillsSection() {
   return (
     <Section title="Skills" id="skills">
-      <div className="d-flex gap-3 flex-wrap mt-4">
+      <div className=" d-flex gap-3 justify-content-center flex-wrap mt-4">
         {skillData.map((skills) => (
           <SkillBadge key={skills.skill} {...skills} />
         ))}
