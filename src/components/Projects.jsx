@@ -14,7 +14,8 @@ function Projects() {
       description: [
         "Developed a real-time collaborative drawing application leveraging Node.js, Express, and Socket.IO, enabling multiple users to draw simultaneously on a shared canvas.",
       ],
-      link: "https://github.com/IsaacDC/drawing_canvas",
+      sourceCodeLink: "https://github.com/IsaacDC/drawing_canvas",
+      demoLink: "https://google.com",
       technologies: ["Node.js", "Express", "Socket.IO", "Redis", "MySQL"],
       media: canvas,
     },
@@ -24,7 +25,8 @@ function Projects() {
         "Developed a healthcare-focused application designed to streamline communication between doctors, pharmacists, and patients by securely tracking and managing patient prescriptions.",
         " The app utilizes React.js for the front-end, Supabase for the back-end, and Python with OpenCV and Roboflow APIs for AI-powered video detection to count and identify different pill types.",
       ],
-      link: "https://github.com/d4julian/pharma-vision",
+      sourceCodeLink: "https://github.com/d4julian/pharma-vision",
+      demoLink: "",
       technologies: ["React.js", "Supabase", "Python", "OpenCV", "Roboflow"],
       media: pharmavision,
     },
@@ -33,7 +35,9 @@ function Projects() {
       description: [
         "Created an API service to support a mock online web application bookstore. My team completed the project using the POSTman API platform, Java, Spring, and MySQL.",
       ],
-      link: "https://github.com/IsaacDC/CEN-4010-Group-6-Team-Project-Geek-Text",
+      sourceCodeLink:
+        "https://github.com/IsaacDC/CEN-4010-Group-6-Team-Project-Geek-Text",
+      demoLink: "",
       technologies: ["Java", "Spring Boot", "MySQL"],
       media: geektextlogo,
     },
@@ -42,7 +46,8 @@ function Projects() {
       description: [
         "This project focused on training a machine translation model using the MT5 (Multilingual Translation 5) model. The goal is to develop a robust translation system capable of translating text between multiple languages in real-time, between two users who are using the application at the same time.",
       ],
-      link: "https://gitlab.com/cap4612/Machine-Learning-Project",
+      sourceCodeLink: "https://gitlab.com/cap4612/Machine-Learning-Project",
+      demoLink: "",
       technologies: ["Python", "TensorFlow", "Flask", "GitLab"],
       media: mlProject,
     },
@@ -51,7 +56,8 @@ function Projects() {
       description: [
         "Developed an iOS app using SwiftUI enabling users to join or create neighborhood groups within specified zip codes and organize local events.",
       ],
-      link: "https://github.com/IsaacDC/Neighborhood-Connect",
+      sourceCodeLink: "https://github.com/IsaacDC/Neighborhood-Connect",
+      demoLink: "",
       technologies: ["SwiftUI", "Firebase", "Google Maps API"],
       media: neighborhoodConnect,
     },

@@ -54,8 +54,8 @@ h4,
 h5,
 h6,
 a {
-  font-family: "Orbitron";
   text-transform: uppercase;
+  margin: 0;
 }
 
 a {

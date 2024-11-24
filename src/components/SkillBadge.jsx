@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "../assets/styles/Skills.module.css";
+
 function SkillBadge({
-  bgColor = "rgba(255,255,255,0.3",
+  bgColor = "rgba(255,255,255,0.3)",
   img = "",
-  skill = "",
+  skill = "Skill",
 }) {
   return (
     <div
@@ -28,7 +29,6 @@ function SkillBadge({
 SkillBadge.propTypes = {
   bgColor: PropTypes.string,
   img: PropTypes.string.isRequired,
-  alt: PropTypes.string,
   skill: PropTypes.string.isRequired,
 };
 

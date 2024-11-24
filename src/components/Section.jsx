@@ -10,7 +10,7 @@ const Section = ({ title, children, className = "" }) => {
       ref={sectionRef}
       className={`${defaultStyling} fade-in ${isVisible ? "is-visible" : ""}`}
     >
-      {title && <h1 className={`text-center `}>{title}</h1>}
+      {title && <h1 className={`text-center`}>{title}</h1>}
       {children}
     </section>
   );

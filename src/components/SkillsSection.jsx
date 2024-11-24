@@ -53,9 +53,17 @@ const skillData = [
 ];
 
 function SkillsSection() {
+  const itemCount = skillData.length;
+
+  const getGridDimensions = () => {
+    if (itemCount <= 4) return "col-md-3";
+    if (itemCount <= 8) return "col-md-3";
+    return "col-md-4";
+  };
+
   return (
     <Section title="Skills" id="skills">
-      <div className=" d-flex gap-3 justify-content-center flex-wrap mt-4">
+      <div className="d-flex gap-3 justify-content-center flex-wrap my-5">
         {skillData.map((skills) => (
           <SkillBadge key={skills.skill} {...skills} />
         ))}

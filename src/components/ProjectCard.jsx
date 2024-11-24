@@ -2,9 +2,18 @@ import React, { useState } from "react";
 import fadeIn from "../hooks/fadeInHook";
 import PropTypes from "prop-types";
 import styles from "../assets/styles/ProjectCard.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { Modal } from "react-bootstrap";
 
-const ProjectCard = ({ title, description, link, technologies, media }) => {
+const ProjectCard = ({
+  title,
+  description,
+  sourceCodeLink,
+  demoLink,
+  technologies,
+  media,
+}) => {
   const [showModal, setShowModal] = useState(false);
   const isVideo = media.toLowerCase().endsWith(".mp4");
 
@@ -23,30 +32,42 @@ const ProjectCard = ({ title, description, link, technologies, media }) => {
       className={`fade-in container my-5 border-start 
       ${isVisible ? "is-visible" : ""}`}
     >
-      <div className="row g-0">
-        <div className="col-md-8 p-1">
+      <div className="row">
+        <div className="col-md-8">
           <h4 className="card-title">{title}</h4>
           <p className="card-text">{description}</p>
-          {link && (
-            <a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`d-inline-block my-2 ${styles.projectLink}`}
-              
-            >
-              View Project
-            </a>
-          )}
+          <div className="d-flex gap-5">
+            {sourceCodeLink && (
+              <a
+                href={sourceCodeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`d-inline-block my-2 ${styles.links}`}
+              >
+                View Source Code{" "}
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+              </a>
+            )}
+            {demoLink && (
+              <a
+                href={demoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`d-inline-block my-2 ${styles.links}`}
+              >
+                View Demo <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+              </a>
+            )}
+            </div>
           {technologies && (
-            <div className="d-flex gap-3 flex-wrap">
+            <div className="d-flex gap-3 flex-wrap mb-3">
               {technologies.map((tech, index) => (
                 <small key={index}>
                   <p
-                    className={`d-block p-2 rounded-5`}
+                    className={`d-block px-3 rounded-5 m-0`}
                     style={{
                       color: "lightblue",
-                      backgroundColor: "#03002e",
+                      backgroundColor: "#081E3F",
                     }}
                   >
                     {tech}
@@ -119,7 +140,8 @@ const ProjectCard = ({ title, description, link, technologies, media }) => {
 ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.arrayOf(PropTypes.string.isRequired),
-  link: PropTypes.string,
+  sourceCodeLink: PropTypes.string,
+  demoLink: PropTypes.string,
   technologies: PropTypes.arrayOf(PropTypes.string),
   media: PropTypes.string.isRequired,
 };

@@ -20,7 +20,7 @@ const socialMedias = [
 
 function AboutMe() {
   return (
-    <Section title="Isaac Del Castillo" className="mt-5">
+    <Section title="Isaac Del Castillo">
       <p className="lead">A software developer located in Miami, Florida</p>
       <ul className="d-flex column p-0 m-0 gap-3">
         {socialMedias.map((socials) => (
