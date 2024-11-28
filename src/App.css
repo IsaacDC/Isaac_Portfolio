@@ -71,7 +71,7 @@ a {
 .content {
   position: relative;
   z-index: 1;
-  max-width: 70%;
+  max-width: 50%;
 }
 
 .fade-in {

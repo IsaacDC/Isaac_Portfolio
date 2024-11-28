@@ -33,7 +33,7 @@ const ProjectCard = ({
       ${isVisible ? "is-visible" : ""}`}
     >
       <div className="row">
-        <div className="col-md-8">
+        <div className="col-md-8 d-flex flex-column gap-2">
           <h4 className="card-title">{title}</h4>
           <p className="card-text">{description}</p>
           <div className="d-flex gap-5">

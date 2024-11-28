@@ -9,7 +9,7 @@ function SkillBadge({
 }) {
   return (
     <div
-      className={`d-flex align-items-center gap-3 rounded-2 p-1 ${styles.skillBadge}`}
+      className={`d-flex align-items-center gap-3 rounded-2 p-1 col-sm-6 col-md-4 col-lg-3 ${styles.skillBadge}`}
       style={{ backgroundColor: bgColor }}
     >
       <div className="p-1 rounded-2">

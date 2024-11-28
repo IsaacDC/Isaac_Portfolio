@@ -4,9 +4,9 @@
   object-fit: cover;
   padding: 0;
 }
-.skillBadge {
+/* .skillBadge {
   width: 400px;
-}
+} */
 
 .skillBadge:hover  {
   animation: animation .2s forwards;
