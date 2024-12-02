@@ -4,20 +4,3 @@
   object-fit: cover;
   padding: 0;
 }
-/* .skillBadge {
-  width: 400px;
-} */
-
-.skillBadge:hover  {
-  animation: animation .2s forwards;
-}
-
-@keyframes animation {
-  0% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(-5px);
-  }
-}
-
