@@ -34,8 +34,13 @@ const ProjectCard = ({
     >
       <div className="row">
         <div className="col-md-8 d-flex flex-column gap-2">
-          <h4 className="card-title">{title}</h4>
-          <p className="card-text">{description}</p>
+          <h2
+            className="fw-bold"
+            style={{ color: "rgb(217 249 157)" }}
+          >
+            {title}
+          </h2>
+          <p>{description}</p>
           <div className="d-flex gap-5">
             {sourceCodeLink && (
               <a
@@ -58,7 +63,7 @@ const ProjectCard = ({
                 View Demo <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
               </a>
             )}
-            </div>
+          </div>
           {technologies && (
             <div className="d-flex gap-3 flex-wrap mb-3">
               {technologies.map((tech, index) => (
@@ -66,8 +71,8 @@ const ProjectCard = ({
                   <p
                     className={`d-block px-3 rounded-5 m-0`}
                     style={{
-                      color: "lightblue",
-                      backgroundColor: "#081E3F",
+                      color: "rgb(217 249 157)",
+                      backgroundColor: "	#4F7942",
                     }}
                   >
                     {tech}

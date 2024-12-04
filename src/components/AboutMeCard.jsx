@@ -21,38 +21,29 @@ const socialMedias = [
 
 const AboutMeCard = () => {
   return (
-    <div className="d-flex justify-content-center">
-      <div className="row align-items-center">
-        <div className="col-md-4">
-          <img
-            src="https://placehold.co/200x200"
-            className="img-fluid rounded-circle"
-            alt="..."
-          />
-        </div>
-        <div className="d-flex flex-column gap-3 col-md-8">
-          <div>
-            <h1>Isaac Del Castillo</h1>
-            <ul className="m-0 p-0" style={{ listStyleType: "none" }}>
-              <li>
-                <FontAwesomeIcon icon={faCode} /> {" "}
-                Software Developer
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faLocationDot} />{" "}
-                Miami, Florida
-              </li>
-            </ul>
-          </div>
-          <div>
-            <ul className="d-flex column p-0 m-0 gap-3">
-              {socialMedias.map((socials) => (
-                <SocialsCoin key={socials.href} {...socials} />
-              ))}
-            </ul>
-            <div />
-          </div>
-        </div>
+    <div>
+      <div className="d-flex flex-column gap-3 col-md-8">
+        <section>
+          <h1>Isaac Del Castillo</h1>
+          <ul className="m-0 p-0">
+            <li>
+              <FontAwesomeIcon className='me-2'icon={faCode} />
+              Software Developer
+            </li>
+            <li>
+              <FontAwesomeIcon className='me-3' icon={faLocationDot} />
+              Miami, Florida
+            </li>
+          </ul>
+        </section>
+        <section>
+          <ul className="d-flex column p-0 m-0 gap-3">
+            {socialMedias.map((socials) => (
+              <SocialsCoin key={socials.href} {...socials} />
+            ))}
+          </ul>
+          <div />
+        </section>
       </div>
     </div>
   );

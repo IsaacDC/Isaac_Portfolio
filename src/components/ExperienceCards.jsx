@@ -12,11 +12,18 @@ function ExperienceCard({ title, company, location, dates, description }) {
         isVisible ? "is-visible" : ""
       }`}
     >
-      <h4>{title}</h4>
-      <p>
-        {company} | {location}
-        <span className="d-block">{dates}</span>
-      </p>
+      <div className="d-flex align-items-center justify-content-between">
+        <div>
+          <h2 className="fw-bold" style={{ color: "rgb(217 249 157)" }}>
+            {title}
+          </h2>
+          {company} | {location}
+        </div>
+        <div>
+          <span className="d-block">{dates}</span>
+        </div>
+      </div>
+      <p></p>
       <p>{description}</p>
     </div>
   );

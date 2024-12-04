@@ -31,7 +31,7 @@ function Projects() {
       media: pharmavision,
     },
     {
-      title: "API Integration and Database Management Project",
+      title: "Book store API",
       description: [
         "Created an API service to support a mock online web application bookstore. My team completed the project using the POSTman API platform, Java, Spring, and MySQL.",
       ],
@@ -42,7 +42,7 @@ function Projects() {
       media: geektextlogo,
     },
     {
-      title: "Real-Time Multilingual Translation Application",
+      title: "Real-Time Multilingual Translation Chat",
       description: [
         "This project focused on training a machine translation model using the MT5 (Multilingual Translation 5) model. The goal is to develop a robust translation system capable of translating text between multiple languages in real-time, between two users who are using the application at the same time.",
       ],

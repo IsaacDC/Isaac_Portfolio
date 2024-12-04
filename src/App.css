@@ -36,6 +36,22 @@ body {
   overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgb(63, 63, 63);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #5047d1;
+}
+
 *,
 *::before,
 *::after {

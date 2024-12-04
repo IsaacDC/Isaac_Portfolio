@@ -27,11 +27,9 @@ function Experience() {
     },
   ];
   return (
-    <Section title='Experience'id="experience">
+    <Section title="Experience" id="experience">
       {experienceData.map((experience, index) => (
-        <div key={index}>
-          <ExperienceCard {...experience} />
-        </div>
+        <ExperienceCard key={index} {...experience} />
       ))}
     </Section>
   );
