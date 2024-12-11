@@ -1,8 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import AboutMe from "./components/AboutMe.jsx";
-import Experience from "./components/Experience.jsx";
-import SkillsSection from "./components/SkillsSection.jsx";
-import Projects from "./components/Projects.jsx";
+import AboutMe from "./components/AboutMe/AboutMe.jsx";
+import Experience from "./components/Experience/Experience.jsx";
+import SkillsSection from "./components/Skills/SkillsSection.jsx";
+import Projects from "./components/Projects/Projects.jsx";
 import Footer from "./components/Footer.jsx";
 import "./App.css";
 import "./reset.css";
@@ -10,14 +10,12 @@ import "./reset.css";
 function App() {
   return (
     <>
-      <div className="bg-container">
-        <div className="content">
-          <AboutMe />
-          <SkillsSection />
-          <Experience />
-          <Projects />
-          <Footer />
-        </div>
+      <div className="mx-auto d-flex flex-column gap-4 content">
+        <AboutMe />
+        <SkillsSection />
+        <Experience />
+        <Projects />
+        <Footer />
       </div>
     </>
   );

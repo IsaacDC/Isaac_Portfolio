@@ -1,5 +1,5 @@
 import React from "react";
-import Section from "./Section";
+import Section from "../Section.jsx";
 import AboutMeCard from "./AboutMeCard.jsx";
 import AboutMePfp from "./AboutMePfp.jsx";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import ExperienceCard from "./ExperienceCards";
-import Section from "./Section";
+import Section from "../Section";
 
 function Experience() {
   const experienceData = [

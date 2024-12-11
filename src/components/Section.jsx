@@ -3,7 +3,7 @@ import useVisibility from "../hooks/fadeInHook.jsx";
 import "../App.css";
 
 const Section = ({ title, children, className = "" }) => {
-  const defaultStyling = `p-5 border-bottom my-5 ${className}`.trim();
+  const defaultStyling = `p-5 border-bottom ${className}`.trim();
   const [isVisible, sectionRef] = useVisibility(0.1);
   return (
     <section

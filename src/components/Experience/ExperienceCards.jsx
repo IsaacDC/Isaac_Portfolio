@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import fadeIn from "../hooks/fadeInHook";
+import fadeIn from "../../hooks/fadeInHook";
 
 function ExperienceCard({ title, company, location, dates, description }) {
   const [isVisible, cardRef] = fadeIn(0.1);
@@ -14,7 +14,7 @@ function ExperienceCard({ title, company, location, dates, description }) {
     >
       <div className="d-flex align-items-center justify-content-between">
         <div>
-          <h2 className="fw-bold" style={{ color: "rgb(217 249 157)" }}>
+          <h2 className="fw-bold soft-blue">
             {title}
           </h2>
           {company} | {location}

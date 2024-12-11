@@ -7,3 +7,32 @@
 .links:hover {
   color: rgb(150, 150, 150);
 }
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Ensures all cards take full height in the container */
+  min-height: 300px; /* Set a minimum height to keep consistency */
+  max-height: 400px; /* Optional: Limit maximum height */
+  overflow: hidden; /* Ensures content doesn't spill out */
+  box-sizing: border-box;
+}
+
+.projectCard img,
+.projectCard video {
+  object-fit: cover; /* Ensures images/videos fit within bounds */
+  width: 100%; /* Stretch to fill the container width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.projectCardContent {
+  flex-grow: 1; /* Ensures the content area takes available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Adjust content spacing */
+}
+
+.projectCardFooter {
+  margin-top: auto; /* Push footer (e.g., buttons) to the bottom */
+}

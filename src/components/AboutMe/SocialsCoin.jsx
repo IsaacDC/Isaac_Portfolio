@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../assets/styles/Socials.module.css";
+import styles from "../../assets/styles/Socials.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function SocialsCoin({ href, icon, download }) {
