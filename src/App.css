@@ -37,21 +37,13 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 15px;
+  width: 0; /* Remove scrollbar width */
+  height: 0; /* Remove horizontal scrollbar height */
 }
 
 body::-webkit-scrollbar-thumb {
-  background: rgb(63, 63, 63);
-  border-radius: 10px;
+  background: transparent; /* Ensure no scrollbar thumb is visible */
 }
-
-body::-webkit-scrollbar-track {
-  background: transparent;
-}
-body::-webkit-scrollbar-thumb:hover {
-  background: #5047d1;
-}
-
 *,
 *::before,
 *::after {
@@ -74,17 +66,12 @@ a {
   margin: 0;
 }
 
-.soft-blue{
+.soft-blue {
   color: rgb(157 249 217);
 }
 
 a {
   cursor: pointer;
-}
-
-.content{
-  max-width: 50vw;
-  
 }
 
 .fade-in {
@@ -97,19 +84,17 @@ a {
   opacity: 1;
   transform: translateY(0);
 }
-
-.swiper-button-prev,
-.swiper-button-next {
-  height: 40px;
-  background-color: rgba(235, 15, 15, 0.5); /* Optional: Add background for better visibility */
-  border-radius: 50%; /* Make it circular */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.w-sm-100 {
+  width: 100%;
 }
-
-@media screen and (max-width: 760px) {
-  .content {
-    max-width: 100%;
+@media (min-width: 768px) {
+  .w-md-75 {
+    width: 75%;
   }
 }
+@media (min-width: 992px) {
+  .w-lg-50 {
+    width: 50%;
+  }
+}
+

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import fadeIn from "../../hooks/fadeInHook";
+import Media from "../Media";
 import PropTypes from "prop-types";
 import styles from "../../assets/styles/ProjectCard.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,32 +17,26 @@ const ProjectCard = ({
 }) => {
   const [showModal, setShowModal] = useState(false);
   const isVideo = media.toLowerCase().endsWith(".mp4");
-
   const [isVisible, cardRef] = fadeIn(0.1);
-
-  const handleClose = () => {
-    setShowModal(false);
-  };
-  const handleShow = () => {
-    setShowModal(true);
-  };
 
   return (
     <div
       ref={cardRef}
-      className={`${styles.projectCard}}fade-in border rounded p-1
+      className={`${styles.projectCard} fade-in border rounded p-1 flex-grow-1
       ${isVisible ? "is-visible" : ""}`}
     >
-      <div className="m-1" onClick={handleShow} style={{ cursor: "pointer" }}>
+      <div
+        className="m-1"
+        onClick={() => setShowModal(true)}
+        style={{ cursor: "pointer" }}
+      >
         {isVideo ? (
-          <video autoPlay muted loop alt={title} className="img-fluid rounded">
-            <source src={media} type="video/mp4" />
-          </video>
+          <Media isVideo={isVideo} media={media} title={title} />
         ) : (
           <img src={media} alt={title} className="img-fluid rounded" />
         )}
       </div>
-      <div className="m-1">
+      <div className="d-flex flex-column">
         <h5 className="fw-bold soft-blue">{title}</h5>
         <p>{description}</p>
         <div className="d-flex gap-5">
@@ -69,8 +64,8 @@ const ProjectCard = ({
         </div>
         {technologies && (
           <div className="d-flex gap-2 flex-wrap mb-3">
-            {technologies.map((tech, index) => (
-              <small key={index}>
+            {technologies.map((tech) => (
+              <small key={tech}>
                 <p
                   className={`d-block px-3 rounded-5 m-0 soft-blue`}
                   style={{
@@ -85,40 +80,14 @@ const ProjectCard = ({
         )}
       </div>
 
-      <Modal show={showModal} onHide={handleClose} centered>
-        <Modal.Body
-          className="d-flex justify-content-center"
-          style={{ padding: "0" }}
-        >
+      <Modal show={showModal} onHide={() => setShowModal(false)} centered>
+        <Modal.Body className="d-flex justify-content-center p-0">
           {isVideo ? (
-            <video
-              autoPlay
-              controls
-              loop
-              alt={title}
-              className="img-fluid"
-              style={{
-                maxWidth: "200%",
-                maxHeight: "80vh",
-                objectFit: "contain",
-                borderRadius: "10px",
-                border: "2px solid white",
-              }}
-            >
+            <Media isVideo={isVideo} media={media} title={title} modal={true}>
               <source src={media} type="video/mp4" />
-            </video>
+            </Media>
           ) : (
-            <img
-              src={media}
-              alt={title}
-              className="img-fluid"
-              style={{
-                maxWidth: "100%",
-                maxHeight: "80vh",
-                objectFit: "contain",
-                borderRadius: "10px",
-              }}
-            />
+            <Media isVideo={isVideo} media={media} title={title} modal={true} />
           )}
         </Modal.Body>
       </Modal>

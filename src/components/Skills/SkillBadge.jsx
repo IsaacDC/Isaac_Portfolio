@@ -33,7 +33,7 @@ function SkillBadge({
 
   return (
     <div
-      className={`d-flex align-items-center gap-3 rounded-2 p-1 col-sm-6 col-md-4 col-lg-3 ${styles.skillBadge}`}
+      className={`d-flex align-items-center gap-3 rounded-2 p-1 w-100 ${styles.skillBadge}`}
       style={{
         backgroundColor: bgColor,
         boxShadow: boxShadowStyle,
@@ -50,7 +50,7 @@ function SkillBadge({
         />
       </div>
       <div className="text-light">
-        <p className="m-0">{skill}</p>
+        <p className="m-0 d-none d-md-block">{skill}</p>
       </div>
     </div>
   );

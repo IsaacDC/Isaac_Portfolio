@@ -1,8 +1,8 @@
-import pharmavision from "../../assets/images/projects/pharmavision.mp4";
-import neighborhoodConnect from "../../assets/images/projects/neighborhood-connect.mp4";
-import mlProject from "../../assets/images/projects/mlproject.mp4";
-import canvas from "../../assets/images/projects/canvas.mp4";
-import geektextlogo from "../../assets/images/projects/geektextlogo.jpg";
+import pharmavision from "../../assets/media/projects/pharmavision.mp4";
+import neighborhoodConnect from "../../assets/media/projects/neighborhood-connect.mp4";
+import mlProject from "../../assets/media/projects/mlproject.mp4";
+import canvas from "../../assets/media/projects/canvas.mp4";
+import geektextlogo from "../../assets/media/projects/geektextlogo.jpg";
 
 const projectData = [
   {

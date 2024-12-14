@@ -23,7 +23,7 @@ function ExperienceCard({ title, company, location, dates, description }) {
           <span className="d-block">{dates}</span>
         </div>
       </div>
-      <p></p>
+      <br></br>
       <p>{description}</p>
     </div>
   );

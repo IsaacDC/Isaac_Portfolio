@@ -1,12 +1,12 @@
-import htmlImg from "../../assets/images/skills/html.png";
-import reactImg from "../../assets/images/skills/react.png";
-import cssImg from "../../assets/images/skills/css.png";
-import javascriptImg from "../../assets/images/skills/javascript.png";
-import javaImg from "../../assets/images/skills/java.png";
-import pythonImg from "../../assets/images/skills/python.png";
-import mySqlImg from "../../assets/images/skills/mysql.png";
-import gitImg from "../../assets/images/skills/git.png";
-import dockerImg from "../../assets/images/skills/docker.png";
+import htmlImg from "../../assets/media/skills/html.png";
+import reactImg from "../../assets/media/skills/react.png";
+import cssImg from "../../assets/media/skills/css.png";
+import javascriptImg from "../../assets/media/skills/javascript.png";
+import javaImg from "../../assets/media/skills/java.png";
+import pythonImg from "../../assets/media/skills/python.png";
+import mySqlImg from "../../assets/media/skills/mysql.png";
+import gitImg from "../../assets/media/skills/git.png";
+import dockerImg from "../../assets/media/skills/docker.png";
 
  const skillData = [
   {

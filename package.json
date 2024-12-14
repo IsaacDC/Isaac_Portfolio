@@ -20,8 +20,7 @@
     "portfolio": "file:",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.5",
-    "react-dom": "^18.3.1",
-    "swiper": "^11.1.15"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",

@@ -5,7 +5,13 @@ import SkillBadge from "./SkillBadge";
 function SkillsSection() {
   return (
     <Section title="Skills" id="skills">
-      <div className="row gap-2 justify-content-center">
+      <div
+        className="d-grid gap-2"
+        style={{
+          justifyItems: "center",
+          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+        }}
+      >
         {skillData.map((skills) => (
           <SkillBadge key={skills.skill} {...skills} />
         ))}
