@@ -8,7 +8,7 @@ import { faGreaterThan } from "@fortawesome/free-solid-svg-icons";
 function Projects() {
   return (
     <Section title="Projects" id="projects">
-      <div className="d-flex gap-3">
+      <div className="d-flex gap-3 w-100">
         {projectData.slice(0, 2).map((project) => (
           <ProjectCard key={project.title} {...project} />
         ))}

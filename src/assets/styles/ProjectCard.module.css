@@ -7,9 +7,3 @@
 .links:hover {
   color: rgb(150, 150, 150);
 }
-
-.projectCard img,
-.projectCard video {
-  object-fit: cover; /* Ensures images/videos fit within bounds */
-
-}

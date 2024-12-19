@@ -3,13 +3,13 @@ const Media = ({ isVideo, media, title, modal = false }) =>
   isVideo ? (
     <video
       autoPlay
+      muted
       loop
       alt={title}
       className={`img-fluid ${modal ? "" : "rounded"}`}
       style={{
-        maxWidth: "100%",
-        maxHeight: "80vh",
-        objectFit: "contain",
+        maxWidth: modal ? "200%" : "100%",
+        maxHeight: modal ? "80vh" : "100%",
         borderRadius: "10px",
         border: modal ? "2px solid white" : "",
       }}

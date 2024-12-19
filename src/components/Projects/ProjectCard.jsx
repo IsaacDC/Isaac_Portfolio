@@ -22,73 +22,71 @@ const ProjectCard = ({
   return (
     <div
       ref={cardRef}
-      className={`${styles.projectCard} fade-in border rounded p-1 flex-grow-1
+      className={`${
+        styles.projectCard
+      } fade-in border rounded p-1 flex-grow-1 d-flex flex-column gap-2
       ${isVisible ? "is-visible" : ""}`}
+      style={{ flexBasis: 0, borderColor: "rgba(255,255,255,0.5)" }}
     >
       <div
-        className="m-1"
+        className="mw-100 d-flex justify-content-center"
         onClick={() => setShowModal(true)}
-        style={{ cursor: "pointer" }}
+        style={{ aspectRatio: "16/9", cursor: "pointer" }}
       >
-        {isVideo ? (
-          <Media isVideo={isVideo} media={media} title={title} />
-        ) : (
-          <img src={media} alt={title} className="img-fluid rounded" />
+        <Media isVideo={isVideo} media={media} title={title} />
+      </div>
+
+      <div className="d-flex align-items-center" style={{ minHeight: "3rem" }}>
+        <h5 className="fw-bold text-soft-blue">{title}</h5>
+      </div>
+
+      <div style={{ minHeight: "4rem" }}>
+        <span>{description}</span>
+      </div>
+
+      <div
+        className="d-flex gap-5 align-items-center"
+        style={{ minHeight: "2.5rem" }}
+      >
+        {sourceCodeLink && (
+          <a
+            href={sourceCodeLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`d-inline-block my-2 ${styles.links}`}
+          >
+            View Source Code <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+          </a>
+        )}
+        {demoLink && (
+          <a
+            href={demoLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`d-inline-block my-2 ${styles.links}`}
+          >
+            View Demo <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+          </a>
         )}
       </div>
-      <div className="d-flex flex-column">
-        <h5 className="fw-bold soft-blue">{title}</h5>
-        <p>{description}</p>
-        <div className="d-flex gap-5">
-          {sourceCodeLink && (
-            <a
-              href={sourceCodeLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`d-inline-block my-2 ${styles.links}`}
+      <div className="d-flex gap-2 flex-wrap mb-2 mt-auto">
+        {technologies &&
+          technologies.map((tech) => (
+            <small
+              key={tech}
+              className={`d-block px-3 rounded-5 m-0 soft-blue`}
+              style={{
+                backgroundColor: "rgb(50 50 70)",
+              }}
             >
-              View Source Code{" "}
-              <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-            </a>
-          )}
-          {demoLink && (
-            <a
-              href={demoLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`d-inline-block my-2 ${styles.links}`}
-            >
-              View Demo <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-            </a>
-          )}
-        </div>
-        {technologies && (
-          <div className="d-flex gap-2 flex-wrap mb-3">
-            {technologies.map((tech) => (
-              <small key={tech}>
-                <p
-                  className={`d-block px-3 rounded-5 m-0 soft-blue`}
-                  style={{
-                    backgroundColor: "rgb(50 50 70)",
-                  }}
-                >
-                  {tech}
-                </p>
-              </small>
-            ))}
-          </div>
-        )}
+              <span>{tech}</span>
+            </small>
+          ))}
       </div>
 
       <Modal show={showModal} onHide={() => setShowModal(false)} centered>
         <Modal.Body className="d-flex justify-content-center p-0">
-          {isVideo ? (
-            <Media isVideo={isVideo} media={media} title={title} modal={true}>
-              <source src={media} type="video/mp4" />
-            </Media>
-          ) : (
-            <Media isVideo={isVideo} media={media} title={title} modal={true} />
-          )}
+          <Media isVideo={isVideo} media={media} title={title} modal={true} />
         </Modal.Body>
       </Modal>
     </div>
@@ -97,7 +95,7 @@ const ProjectCard = ({
 
 ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.arrayOf(PropTypes.string.isRequired),
+  description: PropTypes.string.isRequired,
   sourceCodeLink: PropTypes.string,
   demoLink: PropTypes.string,
   technologies: PropTypes.arrayOf(PropTypes.string),
