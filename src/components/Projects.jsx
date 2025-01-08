@@ -1,6 +1,6 @@
 import React from "react";
 import pharmavision from "../assets/images/projects/pharmavision.mp4";
-import neighborhoodConnect from "../assets/images/projects/neighborhood-connect.mp4";
+import pieza from "../assets/images/projects/pieza.mp4";
 import mlProject from "../assets/images/projects/mlproject.mp4";
 import canvas from "../assets/images/projects/canvas.mp4";
 import geektextlogo from "../assets/images/projects/geektextlogo.webp";
@@ -47,13 +47,13 @@ function Projects() {
       media: mlProject,
     },
     {
-      title: "Neighborhood Connect",
+      title: "Pieza",
       description: [
-        "Developed an iOS app using SwiftUI enabling users to join or create neighborhood groups within specified zip codes and organize local events.",
+        "Developed a startup project analyzer using ReactJS, Python, MongoDB, and AI models to assist developers and entrepreneurs in structuring and refining startup ideas.",
       ],
-      link: "https://github.com/IsaacDC/Neighborhood-Connect",
-      technologies: ["SwiftUI", "Firebase", "Google Maps API"],
-      media: neighborhoodConnect,
+      link: "https://github.com/d4julian/mlh-2025",
+      technologies: ["ReactJS", "Python", "Llama 3.2", "MongoDB"],
+      media: pieza,
     },
   ];
   return (
