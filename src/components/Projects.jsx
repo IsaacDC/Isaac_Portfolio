@@ -10,6 +10,15 @@ import ProjectCard from "./ProjectCard";
 function Projects() {
   const projectsData = [
     {
+      title: "Pieza",
+      description: [
+        "Developed a startup project analyzer using ReactJS, Python, MongoDB, and AI models to assist developers and entrepreneurs in structuring and refining startup ideas.",
+      ],
+      link: "https://github.com/d4julian/mlh-2025",
+      technologies: ["ReactJS", "Python", "Llama 3.2", "MongoDB"],
+      media: pieza,
+    },
+    {
       title: "Live Collaborative Drawing Canvas",
       description: [
         "Developed a real-time collaborative drawing application leveraging Node.js, Express, and Socket.IO, enabling multiple users to draw simultaneously on a shared canvas.",
@@ -45,15 +54,6 @@ function Projects() {
       link: "https://gitlab.com/cap4612/Machine-Learning-Project",
       technologies: ["Python", "TensorFlow", "Flask", "GitLab"],
       media: mlProject,
-    },
-    {
-      title: "Pieza",
-      description: [
-        "Developed a startup project analyzer using ReactJS, Python, MongoDB, and AI models to assist developers and entrepreneurs in structuring and refining startup ideas.",
-      ],
-      link: "https://github.com/d4julian/mlh-2025",
-      technologies: ["ReactJS", "Python", "Llama 3.2", "MongoDB"],
-      media: pieza,
     },
   ];
   return (
