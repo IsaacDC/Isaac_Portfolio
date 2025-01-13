@@ -2,21 +2,22 @@ import React from "react";
 import PropTypes from "prop-types";
 import fadeIn from "../../hooks/fadeInHook";
 
-function ExperienceCard({ title, company, location, dates, description }) {
+const ExperienceCard = ({ title, company, location, dates, description }) => {
   const [isVisible, cardRef] = fadeIn(0.1);
 
   return (
     <div
       ref={cardRef}
-      className={`border-start container my-5 fade-in ${
+      className={` p-3 rounded shadow fade-in ${
         isVisible ? "is-visible" : ""
       }`}
+      style={{
+        backgroundColor: "rgba(31, 41, 55, 0.7)",
+      }}
     >
       <div className="d-flex align-items-center justify-content-between">
         <div>
-          <h2 className="fw-bold soft-blue">
-            {title}
-          </h2>
+          <h3 className="fw-bold soft-blue">{title}</h3>
           {company} | {location}
         </div>
         <div>
@@ -27,7 +28,7 @@ function ExperienceCard({ title, company, location, dates, description }) {
       <p>{description}</p>
     </div>
   );
-}
+};
 
 ExperienceCard.propTypes = {
   title: PropTypes.string.isRequired,

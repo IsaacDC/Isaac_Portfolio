@@ -1,25 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import Section from "../Section";
 import ProjectCard from "./ProjectCard";
-import projectData from "./ProjectData";
+import ProjectData from "./projectData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGreaterThan } from "@fortawesome/free-solid-svg-icons";
+import { faCaretRight, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
-function Projects() {
+const Projects = () => {
+  const [showMore, setShowMore] = useState(false);
+  const toggleShowMore = () => setShowMore((prev) => !prev);
+
   return (
-    <Section title="Projects" id="projects">
-      <div className="d-flex gap-3 w-100">
-        {projectData.slice(0, 2).map((project) => (
-          <ProjectCard key={project.title} {...project} />
+    <Section title="Projects">
+      <div
+        className="d-grid gap-3 w-100"
+        style={{
+          gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+        }}
+      >
+        {ProjectData.map((project, index) => (
+          <div
+            key={project.title}
+            style={{
+              display: index >= 2 && !showMore ? "none" : "block",
+            }}
+          >
+            <ProjectCard {...project} />
+          </div>
         ))}
       </div>
-      <div className="m-auto">
-        <a>
-          Show more <FontAwesomeIcon icon={faGreaterThan} />
-        </a>
+      <div className="d-flex justify-content-center">
+        <button
+          className="btn text-soft-blue d-flex justify-content-center align-items-center gap-2"
+          onClick={toggleShowMore}
+        >
+          {showMore ? "SHOW LESS" : "SHOW MORE"}{" "}
+          <FontAwesomeIcon icon={showMore ? faCaretDown : faCaretRight} />
+        </button>
       </div>
     </Section>
   );
-}
+};
 
 export default Projects;

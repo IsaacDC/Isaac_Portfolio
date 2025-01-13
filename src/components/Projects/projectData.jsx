@@ -1,10 +1,20 @@
 import pharmavision from "../../assets/media/projects/pharmavision.mp4";
+import pieza from "../../assets/media/projects/pieza.mp4";
 import neighborhoodConnect from "../../assets/media/projects/neighborhood-connect.mp4";
 import mlProject from "../../assets/media/projects/mlproject.mp4";
 import canvas from "../../assets/media/projects/canvas.mp4";
 import geektextlogo from "../../assets/media/projects/geektextlogo.jpg";
 
-const projectData = [
+const ProjectData = [
+  {
+    title: "Pieza",
+    description:
+      "Developed a startup project analyzer to assist developers and entrepreneurs in structuring and refining startup ideas.",
+    sourceCodeLink: "https://github.com/d4julian/mlh-2025",
+    demoLink: "N/A",
+    technologies: ["React.js", "Python", "Llama 3.2", "MongoDB"],
+    media: pieza,
+  },
   {
     title: "Collaborative Drawing Canvas",
     description:
@@ -30,7 +40,7 @@ const projectData = [
     sourceCodeLink:
       "https://github.com/IsaacDC/CEN-4010-Group-6-Team-Project-Geek-Text",
     demoLink: "N/A",
-    technologies: ["Java", "Spring Boot", "MySQL"],
+    technologies: ["Java", "Spring Boot", "MySQL", "Postman"],
     media: geektextlogo,
   },
   {
@@ -53,4 +63,4 @@ const projectData = [
   },
 ];
 
-export default projectData;
+export default ProjectData;

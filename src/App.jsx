@@ -10,7 +10,7 @@ import "./reset.css";
 function App() {
   return (
     <>
-      <div className="mx-auto d-flex flex-column gap-4 w-sm-100 w-md-75 w-lg-50">
+      <div className="mx-auto d-flex flex-column gap-4 w-md-75 w-lg-50">
         <AboutMe />
         <SkillsSection />
         <Experience />

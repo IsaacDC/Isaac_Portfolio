@@ -2,15 +2,11 @@ import skillData from "./skillData";
 import Section from "../Section";
 import SkillBadge from "./SkillBadge";
 
-function SkillsSection() {
+const SkillsSection = () => {
   return (
     <Section title="Skills" id="skills">
       <div
-        className="d-grid gap-2"
-        style={{
-          justifyItems: "center",
-          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-        }}
+        className="d-flex flex-wrap justify-content-center gap-3"
       >
         {skillData.map((skills) => (
           <SkillBadge key={skills.skill} {...skills} />
@@ -18,5 +14,5 @@ function SkillsSection() {
       </div>
     </Section>
   );
-}
+};
 export default SkillsSection;

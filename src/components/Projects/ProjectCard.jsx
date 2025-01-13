@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import fadeIn from "../../hooks/fadeInHook";
 import Media from "../Media";
 import PropTypes from "prop-types";
-import styles from "../../assets/styles/ProjectCard.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { Modal } from "react-bootstrap";
@@ -18,15 +17,17 @@ const ProjectCard = ({
   const [showModal, setShowModal] = useState(false);
   const isVideo = media.toLowerCase().endsWith(".mp4");
   const [isVisible, cardRef] = fadeIn(0.1);
+  const [isSourceHovered, setIsSourceHovered] = useState(false);
+  const [isDemoHovered, setIsDemoHovered] = useState(false);
 
   return (
     <div
       ref={cardRef}
-      className={`${
-        styles.projectCard
-      } fade-in border rounded p-1 flex-grow-1 d-flex flex-column gap-2
+      className={`h-100 fade-in rounded-3 p-2 d-flex flex-column gap-1 shadow
       ${isVisible ? "is-visible" : ""}`}
-      style={{ flexBasis: 0, borderColor: "rgba(255,255,255,0.5)" }}
+      style={{
+        backgroundColor: "rgba(31, 41, 55, 0.7)",
+      }}
     >
       <div
         className="mw-100 d-flex justify-content-center"
@@ -36,16 +37,22 @@ const ProjectCard = ({
         <Media isVideo={isVideo} media={media} title={title} />
       </div>
 
-      <div className="d-flex align-items-center" style={{ minHeight: "3rem" }}>
+      <div
+        className="d-flex align-items-center flex-wrap"
+        style={{ minHeight: "3rem" }}
+      >
         <h5 className="fw-bold text-soft-blue">{title}</h5>
       </div>
 
-      <div style={{ minHeight: "4rem" }}>
+      <div
+        className="d-flex align-items-center flex-wrap"
+        style={{ minHeight: "120px" }}
+      >
         <span>{description}</span>
       </div>
 
       <div
-        className="d-flex gap-5 align-items-center"
+        className="d-flex gap-5 gap-md-3 gap-sm-2 align-items-center"
         style={{ minHeight: "2.5rem" }}
       >
         {sourceCodeLink && (
@@ -53,9 +60,16 @@ const ProjectCard = ({
             href={sourceCodeLink}
             target="_blank"
             rel="noopener noreferrer"
-            className={`d-inline-block my-2 ${styles.links}`}
+            className="icon-link"
+            style={{
+              textDecoration: "none",
+              color: isSourceHovered ? "gray" : "white",
+              transition: "color 0.3s ease",
+            }}
+            onMouseEnter={() => setIsSourceHovered(true)}
+            onMouseLeave={() => setIsSourceHovered(false)}
           >
-            View Source Code <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+            View Code <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
           </a>
         )}
         {demoLink && (
@@ -63,18 +77,25 @@ const ProjectCard = ({
             href={demoLink}
             target="_blank"
             rel="noopener noreferrer"
-            className={`d-inline-block my-2 ${styles.links}`}
+            className=" icon-link"
+            style={{
+              textDecoration: "none",
+              color: isDemoHovered ? "gray" : "white",
+              transition: "color 0.3s ease",
+            }}
+            onMouseEnter={() => setIsDemoHovered(true)}
+            onMouseLeave={() => setIsDemoHovered(false)}
           >
             View Demo <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
           </a>
         )}
       </div>
-      <div className="d-flex gap-2 flex-wrap mb-2 mt-auto">
+      <div className="d-flex gap-2 flex-wrap mt-auto">
         {technologies &&
           technologies.map((tech) => (
             <small
               key={tech}
-              className={`d-block px-3 rounded-5 m-0 soft-blue`}
+              className={`d-block px-3 rounded-5 m-0 soft-blue shadow-sm`}
               style={{
                 backgroundColor: "rgb(50 50 70)",
               }}
@@ -92,7 +113,6 @@ const ProjectCard = ({
     </div>
   );
 };
-
 ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,

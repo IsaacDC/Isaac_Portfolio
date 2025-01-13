@@ -3,13 +3,13 @@ import Section from "../Section.jsx";
 import AboutMeCard from "./AboutMeCard.jsx";
 import AboutMePfp from "./AboutMePfp.jsx";
 
-function AboutMe() {
+const AboutMe = () => {
   return (
-    <Section className="d-flex justify-content-center gap-5">
+    <Section className="gap-lg-5 vh-100">
       <AboutMePfp />
       <AboutMeCard />
     </Section>
   );
-}
+};
 
 export default AboutMe;

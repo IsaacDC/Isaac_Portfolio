@@ -21,29 +21,31 @@ const socialMedias = [
 
 const AboutMeCard = () => {
   return (
-    <div>
-      <div className="d-flex flex-column gap-3 col-md-8">
-        <section>
-          <h1>Isaac Del Castillo</h1>
-          <ul className="m-0 p-0">
-            <li>
-              <FontAwesomeIcon className='me-2'icon={faCode} />
-              Software Developer
-            </li>
-            <li>
-              <FontAwesomeIcon className='me-3' icon={faLocationDot} />
-              Miami, Florida
-            </li>
-          </ul>
-        </section>
-        <section>
-          <ul className="d-flex column p-0 m-0 gap-3">
-            {socialMedias.map((socials) => (
-              <SocialsCoin key={socials.href} {...socials} />
-            ))}
-          </ul>
-          <div />
-        </section>
+    <div className="d-flex flex-column justify-content-center align-items-center gap-3">
+      <div>
+        <h1>Isaac Del Castillo</h1>
+      </div>
+
+      <div className="text-center">
+        <ul className="m-0 p-0">
+          <li>
+            <FontAwesomeIcon className="me-2 text-warning" icon={faCode} />
+            Software Developer
+          </li>
+          <li>
+            <FontAwesomeIcon className="me-2 text-danger" icon={faLocationDot} />
+            Miami, Florida
+          </li>
+        </ul>
+      </div>
+
+      <div className="mt-5">
+        <ul className="d-flex justify-content-center align-items-center p-0 m-0 gap-3">
+          {socialMedias.map((socials) => (
+            <SocialsCoin key={socials.href} {...socials} />
+          ))}
+        </ul>
+        <div />
       </div>
     </div>
   );

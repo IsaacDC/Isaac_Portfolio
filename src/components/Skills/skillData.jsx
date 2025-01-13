@@ -1,59 +1,65 @@
-import htmlImg from "../../assets/media/skills/html.png";
-import reactImg from "../../assets/media/skills/react.png";
-import cssImg from "../../assets/media/skills/css.png";
-import javascriptImg from "../../assets/media/skills/javascript.png";
-import javaImg from "../../assets/media/skills/java.png";
-import pythonImg from "../../assets/media/skills/python.png";
-import mySqlImg from "../../assets/media/skills/mysql.png";
-import gitImg from "../../assets/media/skills/git.png";
-import dockerImg from "../../assets/media/skills/docker.png";
+import htmllogo from "../../assets/media/skills/html.svg";
+import reactlogo from "../../assets/media/skills/react.svg";
+import csslogo from "../../assets/media/skills/css.svg";
+import javascriptlogo from "../../assets/media/skills/javascript.svg";
+import javalogo from "../../assets/media/skills/java.svg";
+import pythonlogo from "../../assets/media/skills/python.svg";
+import mySqllogo from "../../assets/media/skills/mysql.svg";
+import gitlogo from "../../assets/media/skills/git.svg";
+import dockerlogo from "../../assets/media/skills/docker.svg";
+import redislogo from "../../assets/media/skills/redis.svg";
 
- const skillData = [
+const skillData = [
   {
-    img: reactImg,
+    logo: reactlogo,
     bgColor: "rgba(97,219,251,0.3)",
     skill: "React",
   },
   {
-    img: htmlImg,
+    logo: htmllogo,
     bgColor: "rgba(255,69,0, 0.3)",
     skill: "HTML5",
   },
   {
-    img: cssImg,
+    logo: csslogo,
     bgColor: "rgba(102,	51,	153, 0.3)",
     skill: "CSS3",
   },
   {
-    img: javascriptImg,
+    logo: javascriptlogo,
     bgColor: "rgba(255,255,0,0.3)",
     skill: "JavaScript",
   },
   {
-    img: javaImg,
+    logo: javalogo,
     bgColor: "rgba(255, 255, 255, 0.1)",
     skill: "Java",
   },
   {
-    img: pythonImg,
+    logo: pythonlogo,
     bgColor: "rgba(55, 123, 235, 0.3)",
     skill: "Python",
   },
   {
-    img: mySqlImg,
+    logo: mySqllogo,
     bgColor: "rgba(0, 117, 143, 0.3)",
     skill: "MySQL",
   },
   {
-    img: gitImg,
+    logo: gitlogo,
     bgColor: "rgba(241,80,47,0.3)",
     skill: "Git",
   },
   {
-    img: dockerImg,
+    logo: dockerlogo,
     bgColor: "rgba(13, 183, 237, 0.3)",
     skill: "Docker",
   },
+  {
+    logo: redislogo,
+    bgColor: "rgba(216, 44, 32, 0.3)",
+    skill: "Redis",
+  }
 ];
 
 export default skillData;

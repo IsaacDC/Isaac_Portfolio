@@ -1,6 +1,0 @@
-.skillImg {
-  width: clamp(10px, calc(60px + 10vw), 40px);
-  height: clamp(10px, calc(60px + 10vw), 40px);
-  object-fit: cover;
-  padding: 0;
-}

@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import styles from "../../assets/styles/Skills.module.css";
 
-function SkillBadge({
+const SkillBadge = ({
   bgColor = "rgba(255,255,255,0.3)",
-  img = "",
+  logo = "",
   skill = "Skill",
-}) {
+}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   // Function to adjust alpha of the color
@@ -33,7 +32,7 @@ function SkillBadge({
 
   return (
     <div
-      className={`d-flex align-items-center gap-3 rounded-2 p-1 w-100 ${styles.skillBadge}`}
+      className="px-3 py-2 d-flex align-items-center justify-content-center gap-3 rounded-2"
       style={{
         backgroundColor: bgColor,
         boxShadow: boxShadowStyle,
@@ -42,23 +41,27 @@ function SkillBadge({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="p-1 rounded-2">
+      <div className="rounded-2">
         <img
-          src={img}
+          src={logo}
           alt={`${skill} logo`}
-          className={`${styles.skillImg} img-fluid `}
+          style={{
+            width: "clamp(10px, calc(60px + 10vw), 40px)",
+            height: "clamp(10px, calc(60px + 10vw), 40px)",
+            objectFit: "cover",
+          }}
         />
       </div>
-      <div className="text-light">
-        <p className="m-0 d-none d-md-block">{skill}</p>
+      <div className="text-light d-none d-sm-block">
+        <p className="m-0">{skill}</p>
       </div>
     </div>
   );
-}
+};
 
 SkillBadge.propTypes = {
   bgColor: PropTypes.string,
-  img: PropTypes.string.isRequired,
+  logo: PropTypes.string.isRequired,
   skill: PropTypes.string.isRequired,
 };
 

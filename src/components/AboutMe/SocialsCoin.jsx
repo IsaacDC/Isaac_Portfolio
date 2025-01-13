@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../../assets/styles/Socials.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function SocialsCoin({ href, icon, download }) {
+const SocialsCoin = ({ href, icon, download }) => {
   return (
     <li className={`${styles.smIcon}`}>
       <a
@@ -14,6 +14,6 @@ function SocialsCoin({ href, icon, download }) {
       </a>
     </li>
   );
-}
+};
 
 export default SocialsCoin;
