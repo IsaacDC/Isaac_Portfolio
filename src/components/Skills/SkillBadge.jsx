@@ -5,6 +5,8 @@ const SkillBadge = ({
   bgColor = "rgba(255,255,255,0.3)",
   logo = "",
   skill = "Skill",
+  isActive = false,
+  onToggle = () => {},
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -40,6 +42,10 @@ const SkillBadge = ({
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={() => {
+        onToggle(); // Call the onToggle function
+        setIsHovered(true); // Set hover state
+      }}
     >
       <div className="rounded-2">
         <img
@@ -47,12 +53,13 @@ const SkillBadge = ({
           alt={`${skill} logo`}
           style={{
             width: "clamp(10px, calc(60px + 10vw), 40px)",
-            height: "clamp(10px, calc(60px + 10vw), 40px)",
             objectFit: "cover",
           }}
         />
       </div>
-      <div className="text-light d-none d-sm-block">
+      <div
+        className={`text-light ${isActive ? "d-block" : "d-none"} d-sm-block`}
+      >
         <p className="m-0">{skill}</p>
       </div>
     </div>
