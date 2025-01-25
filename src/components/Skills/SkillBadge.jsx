@@ -43,8 +43,8 @@ const SkillBadge = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={() => {
-        onToggle(); // Call the onToggle function
-        setIsHovered(true); // Set hover state
+        onToggle();
+        setIsHovered(true);
       }}
     >
       <div className="rounded-2">

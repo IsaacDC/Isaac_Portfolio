@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import fadeIn from "../../hooks/fadeInHook";
-import Media from "../Media";
+import Media from "./Media";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
@@ -105,8 +105,18 @@ const ProjectCard = ({
           ))}
       </div>
 
-      <Modal show={showModal} onHide={() => setShowModal(false)} centered>
-        <Modal.Body className="d-flex justify-content-center p-0">
+      <Modal show={showModal} onHide={() => setShowModal(false)} centered dialogClassName="custom-modal">
+        <Modal.Body
+          className="p-1"
+        >
+          <div className="d-flex justify-content-end p-1">
+            <button
+              type="button"
+              className="btn-close"
+              onClick={() => setShowModal(false)}
+              aria-label="Close"
+            ></button>
+          </div>
           <Media isVideo={isVideo} media={media} title={title} modal={true} />
         </Modal.Body>
       </Modal>

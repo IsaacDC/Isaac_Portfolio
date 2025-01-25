@@ -3,16 +3,11 @@ const Media = ({ isVideo, media, title, modal = false }) =>
   isVideo ? (
     <video
       autoPlay
+      controls={modal}
       muted
       loop
       alt={title}
-      className={`img-fluid ${modal ? "" : "rounded"}`}
-      style={{
-        maxWidth: modal ? "200%" : "100%",
-        maxHeight: modal ? "80vh" : "100%",
-        borderRadius: "10px",
-        border: modal ? "2px solid white" : "",
-      }}
+      className={`${modal ? "rounded-bottom" : "rounded"}`}
     >
       <source src={media} type="video/mp4" />
     </video>
@@ -20,12 +15,9 @@ const Media = ({ isVideo, media, title, modal = false }) =>
     <img
       src={media}
       alt={title}
-      className={`img-fluid ${modal ? "" : "rounded"}`}
+      className={`img-fluid ${modal ? "rounded-bottom" : "rounded"}`}
       style={{
-        maxWidth: modal ? "90%" : "100%",
-        maxHeight: "80vh",
         objectFit: "contain",
-        borderRadius: modal ? "10px" : "0",
       }}
     />
   );
