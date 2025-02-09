@@ -1,12 +1,15 @@
 import React from "react";
+import isaacPfp from '../../assets/isaac.jpg'
 
 const AboutMePfp = () => {
   return (
-    <div>
+    <div style={{
+      width: "40%"
+    }}>
       <img
-        src="https://placehold.co/200x200"
-        className="img-fluid rounded-circle"
-        alt="..."
+        src={isaacPfp}
+        className="img-thumbnail img-fluid rounded-circle"
+        alt="Isaac's Profile Picture"
       />
     </div>
   );
