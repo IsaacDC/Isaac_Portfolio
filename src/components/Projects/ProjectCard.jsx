@@ -26,7 +26,7 @@ const ProjectCard = ({
       className={`h-100 fade-in rounded-3 p-2 d-flex flex-column gap-1 shadow
       ${isVisible ? "is-visible" : ""}`}
       style={{
-        backgroundColor: "rgba(31, 41, 55, 0.7)",
+        backgroundColor: "var(--secondary-bg-color)",
       }}
     >
       <div
@@ -41,7 +41,14 @@ const ProjectCard = ({
         className="d-flex align-items-center flex-wrap"
         style={{ minHeight: "3rem" }}
       >
-        <h5 className="fw-bold text-soft-blue">{title}</h5>
+        <h5
+          className="fw-bold"
+          style={{
+            color: "var(--blue-text)",
+          }}
+        >
+          {title}
+        </h5>
       </div>
 
       <div
@@ -97,7 +104,7 @@ const ProjectCard = ({
               key={tech}
               className={`d-block px-3 rounded-5 m-0 soft-blue shadow-sm`}
               style={{
-                backgroundColor: "rgb(50 50 70)",
+                backgroundColor: "var(--tertiary)",
               }}
             >
               <span>{tech}</span>
@@ -105,18 +112,20 @@ const ProjectCard = ({
           ))}
       </div>
 
-      <Modal show={showModal} onHide={() => setShowModal(false)} centered dialogClassName="custom-modal">
-        <Modal.Body
-          className="p-1"
-        >
-          <div className="d-flex justify-content-end p-1">
-            <button
-              type="button"
-              className="btn-close"
-              onClick={() => setShowModal(false)}
-              aria-label="Close"
-            ></button>
-          </div>
+      <Modal
+        show={showModal}
+        onHide={() => setShowModal(false)}
+        centered
+        size="xl"
+        data-bs-theme="dark"
+
+      >
+        <Modal.Header closeButton>
+          <Modal.Title style={{ color: "var(--blue-text" }}>
+            {title}
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body         className="m-auto">
           <Media isVideo={isVideo} media={media} title={title} modal={true} />
         </Modal.Body>
       </Modal>

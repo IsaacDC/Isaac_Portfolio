@@ -30,8 +30,11 @@ const Projects = () => {
       </div>
       <div className="d-flex justify-content-center">
         <button
-          className="btn text-soft-blue d-flex justify-content-center align-items-center gap-2"
+          className="btn d-flex justify-content-center align-items-center gap-2"
           onClick={toggleShowMore}
+          style={{
+            color: "var(--blue-text)",
+          }}
         >
           {showMore ? "SHOW LESS" : "SHOW MORE"}{" "}
           <FontAwesomeIcon icon={showMore ? faCaretDown : faCaretRight} />
