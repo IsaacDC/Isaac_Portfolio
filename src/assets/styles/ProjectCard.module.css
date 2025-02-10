@@ -1,8 +1,0 @@
-.projectLink {
-  color: white;
-  transition: color 0.3s ease;
-}
-
-.projectLink:hover {
-  color: rgb(150, 150, 150);
-}

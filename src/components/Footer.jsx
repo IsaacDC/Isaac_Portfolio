@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-function Footer() {
+const Footer = () => {
   useEffect(() => {
     const copyrightEl = document.getElementById("copyrightText");
 
