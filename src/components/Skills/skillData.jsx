@@ -8,7 +8,6 @@ import mySqllogo from "../../assets/media/skills/mysql.svg";
 import gitlogo from "../../assets/media/skills/git.svg";
 import dockerlogo from "../../assets/media/skills/docker.svg";
 import redislogo from "../../assets/media/skills/redis.svg";
-import eightwall from "../../assets/media/skills/8thwall.png";
 
 const skillData = [
   {
@@ -60,11 +59,6 @@ const skillData = [
     logo: redislogo,
     bgColor: "rgba(216, 44, 32, 0.3)",
     skill: "Redis",
-  },
-  {
-    logo: eightwall,
-    bgColor: "rgba(63, 9, 97, 0.3)",
-    skill: "8th Wall",
   },
 ];
 
