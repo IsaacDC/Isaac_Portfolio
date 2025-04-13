@@ -21,6 +21,7 @@ const ProjectData = [
     sourceCodeLink: "https://github.com/IsaacDC/drawing_canvas",
     technologies: ["Node.js", "Express", "Socket.IO", "Redis", "MySQL"],
     media: canvas,
+    demoLink: "https://canvas.isaacofthecastle.com",
   },
   {
     title: "Pharma-Vision",
