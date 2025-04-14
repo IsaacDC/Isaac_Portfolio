@@ -1,7 +1,11 @@
 import React from "react";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faFile } from "@fortawesome/free-regular-svg-icons";
-import { faLocationDot, faCode } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLocationDot,
+  faCode,
+  faGauge
+} from "@fortawesome/free-solid-svg-icons";
 
 import SocialsCoin from "./SocialsCoin";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,6 +21,7 @@ const socialMedias = [
     icon: faFile,
     download: true,
   },
+  { href: "https://dashboard.isaacofthecastle.com", icon: faGauge },
 ];
 
 const AboutMeCard = () => {
@@ -33,7 +38,10 @@ const AboutMeCard = () => {
             Software Developer
           </li>
           <li>
-            <FontAwesomeIcon className="me-2 text-danger" icon={faLocationDot} />
+            <FontAwesomeIcon
+              className="me-2 text-danger"
+              icon={faLocationDot}
+            />
             Miami, Florida
           </li>
         </ul>

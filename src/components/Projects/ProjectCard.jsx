@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import fadeIn from "../../hooks/fadeInHook";
 import Media from "./Media";
 import PropTypes from "prop-types";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { Modal } from "react-bootstrap";
+import Link from "../Link";
 
 const ProjectCard = ({
   title,
@@ -17,8 +16,6 @@ const ProjectCard = ({
   const [showModal, setShowModal] = useState(false);
   const isVideo = media.toLowerCase().endsWith(".mp4");
   const [isVisible, cardRef] = fadeIn(0.1);
-  const [isSourceHovered, setIsSourceHovered] = useState(false);
-  const [isDemoHovered, setIsDemoHovered] = useState(false);
 
   return (
     <div
@@ -63,38 +60,19 @@ const ProjectCard = ({
         style={{ minHeight: "2.5rem" }}
       >
         {sourceCodeLink && (
-          <a
-            href={sourceCodeLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="icon-link"
-            style={{
-              textDecoration: "none",
-              color: isSourceHovered ? "gray" : "white",
-              transition: "color 0.3s ease",
-            }}
-            onMouseEnter={() => setIsSourceHovered(true)}
-            onMouseLeave={() => setIsSourceHovered(false)}
-          >
-            View Code <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-          </a>
+          <Link
+            link={sourceCodeLink}
+            text="View Source"
+            textTransform="uppercase"
+
+          />
         )}
         {demoLink && (
-          <a
-            href={demoLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className=" icon-link"
-            style={{
-              textDecoration: "none",
-              color: isDemoHovered ? "gray" : "white",
-              transition: "color 0.3s ease",
-            }}
-            onMouseEnter={() => setIsDemoHovered(true)}
-            onMouseLeave={() => setIsDemoHovered(false)}
-          >
-            View Demo <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-          </a>
+          <Link
+            link={demoLink}
+            text="View Demo"
+            textTransform="uppercase"
+          />
         )}
       </div>
       <div className="d-flex gap-2 flex-wrap mt-auto">
@@ -118,14 +96,13 @@ const ProjectCard = ({
         centered
         size="xl"
         data-bs-theme="dark"
-
       >
         <Modal.Header closeButton>
           <Modal.Title style={{ color: "var(--blue-text" }}>
             {title}
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body         className="m-auto">
+        <Modal.Body className="m-auto">
           <Media isVideo={isVideo} media={media} title={title} modal={true} />
         </Modal.Body>
       </Modal>

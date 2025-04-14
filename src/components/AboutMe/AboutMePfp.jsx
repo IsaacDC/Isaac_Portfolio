@@ -1,11 +1,15 @@
 import React from "react";
-import isaacPfp from '../../assets/isaac.jpg'
+import isaacPfp from "../../assets/isaac.jpg";
 
 const AboutMePfp = () => {
   return (
-    <div style={{
-      width: "40%"
-    }}>
+    <div
+      style={{
+        width: "40%",
+        WebkitUserSelect: "none",
+        userSelect: "none",
+      }}
+    >
       <img
         src={isaacPfp}
         className="img-thumbnail img-fluid rounded-circle"

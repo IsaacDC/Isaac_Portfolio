@@ -47,7 +47,10 @@ const SkillBadge = ({
         setIsHovered(true);
       }}
     >
-      <div className="rounded-2">
+      <div
+        className="rounded-2"
+        style={{ WebkitUserSelect: "none", userSelect: "none" }}
+      >
         <img
           src={logo}
           alt={`${skill} logo`}

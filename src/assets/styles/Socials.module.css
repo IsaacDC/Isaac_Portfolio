@@ -1,5 +1,4 @@
 .smIcon a {
-  text-decoration: none;
   width: clamp(2.1rem, calc(2rem + 1vw), 3rem);
   height: clamp(2.1rem, calc(2rem + 1vw), 3rem);
   background-color: #f0f9fe;
@@ -52,4 +51,7 @@
 }
 .smIcon:nth-child(4) {
   --bg-color: #d57b8a;
+}
+.smIcon:nth-child(5) {
+  --bg-color: #5a917e;
 }

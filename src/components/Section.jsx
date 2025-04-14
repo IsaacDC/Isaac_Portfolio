@@ -6,9 +6,8 @@ const Section = ({
   title,
   children,
   className = "",
-  flexDirection = "column",
 }) => {
-  const defaultStyling = `p-4 d-flex flex-${flexDirection} justify-content-center align-items-center gap-3`;
+  const defaultStyling = `p-4 d-flex flex-column justify-content-center align-items-center gap-3`;
   const [isVisible, sectionRef] = useVisibility(0.1);
 
   return (

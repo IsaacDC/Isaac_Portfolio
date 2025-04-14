@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import AboutMe from "./components/AboutMe/AboutMe.jsx";
+import AboutMe from "./components/AboutMe/AboutMeSection.jsx";
 import Experience from "./components/Experience/Experience.jsx";
 import SkillsSection from "./components/Skills/SkillsSection.jsx";
 import Projects from "./components/Projects/ProjectsSection.jsx";
